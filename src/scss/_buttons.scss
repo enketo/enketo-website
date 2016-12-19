@@ -1,0 +1,60 @@
+.button-icon-only {
+    background: none;
+    border: none;
+    color: $btn-color;
+    text-shadow: none;
+    padding: 0;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        background: none;
+        opacity: 0.7;
+        text-shadow: none;
+    }
+}
+
+button {
+    color: #fff;
+    background-color: $btn-color;
+    text-shadow: -1px 1px #417cb8;
+    border: none;
+    padding: 3px 15px;
+
+    &:hover {
+        background-color: #346392;
+        text-shadow: -1px 1px #27496d;
+    }
+
+    &:active, &.active {
+        background-color: #27496d;
+        text-shadow: -1px 1px #193047;
+    }
+}
+
+.button-group {
+    $btg-border: 1px solid $body-bg;
+
+    li {
+        button {
+            border-left: $btg-border;
+            border-right: $btg-border;
+        }
+
+        &:first-of-type {
+            button {
+                border-left: none;
+                border-right: $btg-border;
+            }
+        }
+
+        &:last-of-type {
+            button {
+                border-left: $btg-border;
+                border-right: none;
+            }
+        }
+    }
+}

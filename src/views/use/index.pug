@@ -1,0 +1,29 @@
+extends ../../templates/layout
+
+block vars
+  - var current = 'Use';
+
+block title
+  title Use Enketo
+
+block nav
+  +menu(primary[current])
+
+block main
+  .content
+    section
+      h2 Use Enketo
+      article#options.use
+        h3 Options
+        p These are the options to start using Enketo:
+        include ../../templates/use
+      article#form-building
+        h3 Form Building
+        :marked:interpolate
+
+          Internally, Enketo only understands the [XForm](primary.Develop.XForms) format. However, it is highly 
+          recommended to build forms using the much easier [XLSForm format](primary.Use.XLSForm) or an advanced form building application 
+          such as the [KoBoToolbox form builder](http://kobotoolbox.org). 
+
+          These tools will produce a valid XForm without the need to understand the very complex XForms format.
+

@@ -1,0 +1,32 @@
+extends ../../../templates/layout
+
+block vars
+  - var current = 'APIs';
+
+block title
+  title APIs
+
+block nav
+  +menu(primary.Develop)
+
+block main
+  article
+    .content
+      :marked:interpolate
+      
+        ## APIs
+      
+        Enketo Express and Legacy are following these APIs:
+        
+        * [OpenRosa Request API](https://bitbucket.org/javarosa/javarosa/wiki/OpenRosaRequest)
+        * [OpenRosa Form Submission API](https://bitbucket.org/javarosa/javarosa/wiki/FormSubmissionAPI) 
+        * [OpenRosa Form Discovery API](https://bitbucket.org/javarosa/javarosa/wiki/FormListAPI) 
+        * [OpenRosa Form Discovery API](https://bitbucket.org/javarosa/javarosa/wiki/AuthenticationAPI) and 
+          [other authentication](primary.Develop.Authentication)
+        * [OpenRosa MetaDataSchema](https://bitbucket.org/javarosa/javarosa/wiki/OpenRosaMetaDataSchema)  (partially)
+
+        Enketo Express exposes the following APIs:
+        
+        * [Enketo Webform API](sites['enketo-api'])
+        * [Enketo Account Manager API for OpenClinica](https://app.swaggerhub.com/api/Enketo/enketo-express-oc-account-manager/1.0.0)
+

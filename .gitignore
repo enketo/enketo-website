@@ -1,0 +1,5 @@
+node_modules
+public
+.scratchpad
+*.sublime-project
+*.sublime-workspace

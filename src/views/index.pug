@@ -1,0 +1,70 @@
+extends ../templates/layout
+
+block attract
+  .content 
+    .attract__logo
+      img(src='/media/images/logos/enketo_logo.png', alt='enketo logo')
+    .attract__main-image 
+      img(src='/media/images/devices.png', alt='desktops, laptops, mobile devices with different operating systems')
+    h2.attract__taglines
+      | Web forms evolved. Deploy and conduct surveys that work without a connection, on any device.
+block main
+  section.features
+    .content
+      h3 Why Enketo Smart Paper?
+      .feature
+        .img-wrapper
+          img.offline(src='/media/images/offline.png', alt='no internet connection')
+        .desc Works offline
+      .feature
+        .img-wrapper
+          img.smart(src='/media/images/smart.png', alt='smart form logic')
+        .desc Handles skip logic and checks
+      .feature
+        .img-wrapper
+          img.agnostic(src='/media/images/agnostic.png', alt='device and OS agnostic')
+        .desc Cross hardware, cross browser
+      .feature
+        .img-wrapper
+          img.fast(src='/media/images/fast.png', alt='fast')
+        .desc Fast
+      .feature
+        .img-wrapper
+          img.print-friendly(src='/media/images/print_friendly.png', alt='print-friendly')
+        .desc Printer friendly
+  section#samples
+    .content
+      h3
+        | Enketo Smart Paper In Action
+        span.thingie »
+      include ../templates/samples
+  section#tools
+    .content
+      h3
+        | Products That Use Enketo
+        span.thingie »
+      include ../templates/adopters
+  section#use.use
+    .content
+      h3
+        | How to Use Enketo
+        span.thingie »
+      .alert
+        | Want to learn more about the ecosystem Enketo is part of? 
+        span.thingie »
+        | Read the 
+        a(href='/openrosa') introduction
+        | .
+      p There are 3 ways you can use Enketo:
+      include ../templates/use
+  section#about.about
+    .content
+      h3
+        | About Us
+        span.thingie »
+      p The Enketo project is brought to you by open-source contributors and by 
+        a(href='https://www.linkedin.com/company/enketo-llc') Enketo LLC
+        |  with the generous support of its partners and sponsors: 
+      include ../templates/sponsors
+      p Enketo LLC is based in Denver, CO (USA). Its mission is to develop advanced offline-capable web tools for people working 
+        | in conditions where Internet access is intermittent.

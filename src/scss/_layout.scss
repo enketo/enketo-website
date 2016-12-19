@@ -1,0 +1,63 @@
+// Only layout properties, for other styling -> _common.scss
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    // for flexbox bugs
+    height: 100vh;
+}
+
+.header {
+    min-height: 50px;
+}
+
+.header, .secondary-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    // for flexbox bugs
+    flex-shrink: 0;
+}
+
+.attract {
+    // for flexbox bugs
+    flex-shrink: 0;
+}
+
+.search {
+    // for flexbox bugs
+    flex-shrink: 0;
+}
+
+.main {
+    // for flexbox bugs
+    flex: 1 0 auto;
+}
+
+.footer {
+    // for flexbox bugs
+    flex-shrink: 0;
+}
+
+// content of main section
+.content {
+    @include clearfix;
+
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+    padding: 34px 17px;
+}
+
+// header, footer, secondary-nav
+.content-ui {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+    padding: 0 17px;
+}

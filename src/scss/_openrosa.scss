@@ -1,0 +1,19 @@
+#components {
+    img {
+        margin-left: 50px;
+        margin-top: -30px;
+        max-width: 350px;
+        float: right;
+    }
+}
+
+.footnotes {
+    margin-top: 50px;
+    font-size: 12px;
+
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+        list-style-type: none;
+    }
+}

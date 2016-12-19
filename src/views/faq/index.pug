@@ -1,0 +1,129 @@
+extends ../../templates/layout
+
+block vars
+  - var current = 'FAQ';
+
+block title
+  title Frequently Asked Questions
+
+block nav
+  +menu(primary.Use)
+
+block main
+  //- 
+    features:
+      - use class 'dev', 'use' or both to categore a faq
+      - use unique id on details element to allow direct scrolling to location
+
+  .content
+    article.faq
+      h2 Frequently Asked Questions
+      nav.faq__nav
+        //- ul.button-group
+          li: button.faq__nav__all(data-target='.faq') all
+          li: button.faq__nav__use(data-target='.faq') use
+          li: button.faq__nav__dev(data-target='.faq') dev
+        ul.button-group
+          li: button.faq__nav__collapse.summary-toggle(data-toggle='collapse') expand
+
+      details.dev.use#open-source 
+        summary Is Enketo open source?
+        :marked:interpolate
+          Yes it is! The source code is [here](primary.Develop.Code).
+      details.use#offline-use
+        summary How can Enketo (Express) work offline?
+        :marked:interpolate
+          The first time you load any Enketo Express survey, a copy of the app and survey are stored in the browser. An icon will be 
+          shown in the top left of your screen to confirm that it has 
+          been stored.  From that point onwards you 
+          can load that survey even when you do not have an Internet connection. 
+        
+          You can safely shut down your computer and go to the field
+          to collect data. Any data you collect will also be stored persistently in the browser. Enketo will check regularly to see if there
+          is an Internet connection available and try to upload any records that have not been marked as 'draft'. Once the server has confirmed
+          that the data was received successfully, the record will be deleted from the browser storage.
+        
+          More details can be read in this old [blog post](http://blog.enketo.org/offline-capable-web-applications/) and  
+          this [technical faq](./#offline-tech). 
+      details.dev#license
+        summary What software license is Enketo provided under?
+        :marked:interpolate
+          See license details for each Enketo app and library in the README.md files of 
+          [each repository](primary.Develop.Code) each repository.
+      details.use.dev#browsers
+        summary What browsers are supported and recommended?
+        :marked
+          All popular modern browsers are supported and recommended on all platforms except on iOS. They are: Chrome, Firefox, and Edge. 
+          
+          In addition, a couple of non-modern browsers are supported, ie. Safari and Internet Explorer 11. On iOS, modern browsers 
+          are sadly not allowed by Apple. For example, Chrome on iOS is just the Apple-provided form engine with few missing features and a Chrome _skin_ - it is not the _real Chrome_. Therefore, on iOS only, we have no choice but to recommend Safari.
+      details.use.dev#name
+        summary What does "Enketo" mean and how is it pronounced?
+        :marked
+          Enketo means "survey" in [Esperanto](https://en.wikipedia.org/wiki/Esperanto). 
+
+          We are not sure how to properly pronounce it in Esperanto but you could say "\in-ˈke-tō". The first "e" and second "e" should be pronounced the same because each letter has only one pronounciation in Esperanto. (How cool is that!)
+      details.use.dev#sustain
+        summary How is this project funded and sustained?
+        :marked:interpolate
+          The development of Enketo libraries and apps is supported by code contributors and financial contributions by 
+          companies and organizations that have adopted Enketo. These organizations are providing Enketo-powered tools as part of 
+          their own information management products.
+      details.dev#offline-tech
+        summary What are the technologies used for offline capabilities of Enketo (Express)?
+        :marked
+          The app itself is cached in the browser using the Application Cache. In the future, when browser support becomes widespread, 
+          we plan to switch to Service Workers.
+        
+          The data, form, and form resources are stored in the browser using indexedDb.
+      details.dev#enketo-core-diff
+        summary What is the difference between Enketo Express and Enketo Core?
+        :marked:interpolate
+          Enketo Core is a library that contains Enketo's form engine. It is not an app by itself but a minimal and not-very-opinionated 
+          building block that can be used to create Enketo-powered apps. 
+        
+          Enketo Express is one of the apps that is powered by Enketo Core. There are quite a few others created and maintained 
+          by various companies and organizations.
+        
+          For more information see [this page](primary.Develop.Libraries).
+
+      details.use.dev#form-format
+        summary What is the form format that Enketo supports?
+        :marked:interpolate
+
+          Enketo supports only one form format and that is the widely adopted, open-source [OpenRosa XForms format](primary.Develop.XForms). 
+
+          Very few people directly build forms in this format though. The most popular, and recommended, way to create the supported XForms is to create them as [XLSForms](primary.Use.XLSForm) and then convert them to XForms. 
+          Many information management systems will do this conversion for you, behind-the-scenes, and therefore appear to support XLSForms directly.
+          
+      details.dev.use#openclinica-relation
+        summary What is the relationship between OpenClinica and Enketo?
+        :marked:interpolate
+          OpenClinica is using Enketo throughout its platform. It is the major sponsor of Enketo and directly responsible for 
+          many of its features. 
+      details.dev.use#odk-relation
+        summary What is the relationship between Enketo and Open Data Kit (ODK)?
+        p. 
+          Enketo and ODK are following the same XForms format and APIs. This means Enketo Express (and some other Enketo-powered apps) 
+          can be used in conjunction with ODK Aggregate. They should be seen as an alternative for ODK Collect. 
+          The codebases of Enketo Express and ODK Collect are completely separate and both are 100% unique implementations of 
+          the same specifications. 
+        p 
+          | Within the ODK Developer Community, Enketo has taken on the role of documenting and guarding the XForms specification. 
+          | The specification is published at 
+          a(href=sites['enketo-xform-spec'])= sites['enketo-xform-spec']
+          | . In addition Enketo is actively involved in proposing and discussing additions and changes to the specifications in the ODK Developers' fora.
+      details.dev.use#kobo-relation
+        summary What is the relationship between Enketo and KoBoToolbox?
+        :marked:interpolate
+          Enketo Express is an integral part of [kobotoolbox.org](http://kobotoolbox.org) and KoBoToolbox has historically sponsored a 
+          large chunk of Enketo Express' development. It still provides code, emotional support, and funding for bug fixes.
+      details.dev.use#ona-relation
+        summary What is the relationship between Enketo and Ona?
+        :marked
+          Enketo Express is an integral part of [ona.io](https://ona.io). Ona has historically played a major role in Enketo's 
+          development and design. Ona still contributes code, sponsorship, emotional support, and translations to Enketo.
+      details.dev.use#translation
+        summary Can I help translate Enketo Express?
+        :marked:interpolate
+          Please do! Request [here](https://www.transifex.com/enketo/enketo-express) to be added to an existing language or to request for a new language to be added.

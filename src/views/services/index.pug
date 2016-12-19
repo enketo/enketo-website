@@ -1,0 +1,41 @@
+extends ../../templates/layout
+
+mixin add-item(intro)
+  p= intro+' '
+    | Please add 
+    a(href=sites['enketo-code']+'/enketo-website/issues') an issue describing the request 
+    | to this website's repository.
+
+block vars
+  - var current = 'Services';
+
+block nav
+  +menu(primary.Services)
+
+block title
+  title About Enketo
+
+block main
+  article
+    .content
+      h2 Enketo Services
+      section#development
+        :marked
+          ### Enketo Development
+          
+          To customize or develop new tools, contact:
+        
+          * [Enketo LLC](mailto:info@enketo.org), for anything Enketo-related
+
+        +add-item('Would you like to be added to this list?')
+      section#saas
+        :marked
+          ### Enketo as a Service
+          
+          The following Enketo services are available:
+          
+          * Enketo Express as a service at [accounts.enketo.org](https://accounts.enketo.org)
+            by Enketo LLC
+        
+        +add-item('Would you like to add a service to this list?')
+        

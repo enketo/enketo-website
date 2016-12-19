@@ -1,0 +1,19 @@
+@mixin box-sizing($boxmodel) {
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        // 1
+        display: table;
+        // 2
+   
+    }
+    &:after {
+        clear: both;
+    }
+}

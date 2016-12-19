@@ -1,0 +1,51 @@
+{
+    "primary": {
+        "About": {
+            "_self": "#{enketo-main}/about",
+            "Overview": "#{enketo-main}/about/#enketo-overview",
+            "Features": "#{enketo-main}/about/#enketo-features",
+            "Ecosystem": "#{enketo-main}/about/#enketo-ecosystem",
+            "History": "#{enketo-main}/about/#enketo-history",
+            "OpenRosa": "#{enketo-main}/openrosa",
+            "Sponsors": "#{enketo-main}/about/sponsors",
+            "Adoption": "#{enketo-main}/about/adoption",
+            "Contact": "#{enketo-main}/about/contact"
+        },
+        "Use": {
+            "_self": "#{enketo-main}/use",
+            "Options": "#{enketo-main}/use/#options",
+            "Forms": "#{enketo-main}/use/#form-building",
+            "Installation": "#{enketo-main}/use/installation",
+            "FAQ": "#{enketo-main}/faq",
+            "XLSForm": "#{xlsform-spec}",
+            "User Forum": "#{enketo-user-forum}"
+        },
+        "Develop": {
+            "_self": "#{enketo-main}/develop",
+            "Libraries": "#{enketo-main}/develop/#libraries",
+            "Transformation": "#{enketo-main}/develop/#transformation",
+            "Code": "#{enketo-code}",
+            "APIs": "#{enketo-main}/develop/api",
+            "XForms": "#{enketo-main}/xforms",
+            "FAQ": "#{enketo-main}/faq",
+            "Authentication": "#{enketo-main}/develop/auth",
+            "Developer Forum": "#{enketo-developer-forum}"
+        },
+        "Services": {
+            "_self": "#{enketo-main}/services",
+            "Development": "#{enketo-main}/services/#development",
+            "Enketo-as-a-Service": "#{enketo-main}/services/#saas"
+        },
+        "Blog": "#{enketo-blog}"
+    },
+    "sites": {
+        "enketo-main": "https://enketo.org",
+        "enketo-blog": "https://blog.enketo.org/",
+        "enketo-api": "https://apidocs.enketo.org/",
+        "enketo-code": "https://github.com/enketo/",
+        "enketo-xform-spec": "https://opendatakit.github.io/xforms-spec/",
+        "xlsform-spec": "http://xlsform.org/",
+        "enketo-user-forum": "https://groups.google.com/forum/#!forum/enketo-users",
+        "enketo-developer-forum": "https://groups.google.com/forum/#!forum/enketo-dev"
+    }
+}

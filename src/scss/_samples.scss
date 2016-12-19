@@ -1,0 +1,137 @@
+.samples {
+    $margin: 25px;
+    $radius: 10px;
+
+    margin: 0 35px 10px 35px;
+    padding: 0;
+    position: relative;
+
+    &__list-wrapper {
+        overflow-x: hidden;
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0;
+        left: calc(-66.6% - (2 * #{$margin} / 3));
+
+        &__item {
+            $width: calc((100% - 2 * #{$margin} ) / 3);
+
+            position: relative;
+            min-width: $width;
+            width: $width;
+            margin-right: $margin;
+            margin-bottom: 15px;
+            padding: 2px;
+            display: inline-block;
+            vertical-align: top;
+
+            h5 {
+                margin: 10px;
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    flex: 1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &__main {
+                > a {
+                    display: block;
+                    width: 100%;
+                    border: 4px solid $border-color;
+                    border-radius: $radius;
+                    min-height: 246px;
+                    background-size: cover;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            &__details {
+                visibility: hidden;
+                position: absolute;
+                bottom: 0;
+                padding: 10px;
+                background: rgba(51, 51, 51, 0.85);
+                color: $gray-lighter;
+                border-bottom-left-radius: $radius;
+                border-bottom-right-radius: $radius;
+                width: 100%;
+                max-height: 200px;
+                overflow: scroll;
+
+                p {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    padding: 0;
+
+                    + p + p {
+                        text-align: right;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .samples__list__item__main.show-info {
+                & + .samples__list__item__details {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__scroll-btn {
+        position: absolute;
+        transform: scale(1.5, 2);
+        top: 50%;
+
+        &.left-scroll {
+            left: -25px;
+        }
+
+        &.right-scroll {
+            right: -25px;
+        }
+    }
+}
+
+// Show 2 samples at a time
+@media screen and (max-width: $breakpoint-mediumsmall) {
+    $margin: 25px;
+    $width: calc((100% - 1 * #{$margin} ) / 2);
+
+    .samples__list {
+        left: calc(-50% - (1 * #{$margin} / 2));
+
+        &__item {
+            min-width: $width;
+            width: $width;
+        }
+    }
+}
+
+// Show 1 sample at a time
+@media screen and (max-width: $breakpoint-small) {
+    $margin: 25px;
+    $width: 100%;
+
+    .samples__list {
+        left: calc(-100% - #{$margin});
+
+        &__item {
+            min-width: $width;
+            width: $width;
+        }
+    }
+}

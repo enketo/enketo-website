@@ -1,0 +1,20 @@
+extends ../../../templates/layout
+
+block vars
+  - var current = 'Sponsors';
+
+block title
+  title Enketo Sponsors
+
+block nav
+  +menu(primary.About)
+
+block main
+  article
+    .content
+      :marked
+        ## Enketo Sponsors
+        
+        The principal Enketo Project sponsors are or have been:
+        
+      include ../../../templates/sponsors

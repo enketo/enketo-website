@@ -1,0 +1,113 @@
+@mixin side {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1px 5px;
+    border-left: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+}
+
+.dev-overview {
+    $border: 2px solid $brand-primary-color;
+    $padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: $border;
+    padding: $padding;
+    margin: 30px 0;
+    background: $gray-lighter;
+    font-size: 14px;
+
+    h4, ul {
+        width: 100%;
+    }
+
+    h4 {
+        margin: 0 0 10px 0;
+    }
+
+    &__2nd {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        flex: 1 1 200px;
+        border: $border;
+        padding: $padding;
+        margin: $padding;
+        background: white;
+        width: calc(50% - (2 * #{$padding}));
+
+        ul {
+            align-items: flex-start;
+            flex: 1;
+        }
+
+        &__side {
+            @include side;
+        }
+    }
+
+    &__3rd {
+        border: $border;
+        padding: $padding;
+        margin: $padding;
+        background: $gray-lighter;
+    }
+}
+
+.dev-transformation {
+    $border: 2px solid $gray-light;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 30px 0;
+    overflow-x: scroll;
+
+    pre {
+        margin: 0;
+        height: 100%;
+    }
+
+    code {
+        height: 100%;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+
+        //flex: 1;
+
+        &__part {
+            flex: 1 1 120px;
+            border: $border;
+            border-bottom: none;
+            position: relative;
+
+            &:last-of-type {
+                border-bottom: $border;
+            }
+
+            &__side {
+                @include side;
+
+                font-size: 14px;
+                color: $gray-lighter;
+            }
+        }
+    }
+
+    &__arrow {
+        color: $brand-primary-color;
+        width: 50px;
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,62 @@
+extends ../../templates/layout
+
+block vars
+  - var current = 'About';
+
+block title
+  title About Enketo
+
+block nav
+  +menu(primary.About)
+
+block main
+  article
+    .content
+      h2 About Enketo
+      section#enketo-overview
+        h3 Overview
+        p 
+          | Enketo, or Enketo Smart Paper, is the name of an 
+          a(href=sites['enketo-code']+'/enketo-express/') open-source 
+          | web application that uses a popular 
+          a(href=sites['enketo-xform-spec']) open-source form format
+          |. 
+        :marked:interpolate
+          Enketo has been used all around the world for a wide range of uses  
+          from needs assessments in [humanitarian aid](https://kobo.humanitarianresponse.info), 
+          to [raising historical awareness](http://blog.enketo.org/exploring-road-of-the-queen/), 
+          to [clinical research](https://blog.openclinica.com/2015/03/19/engineering-openclinicas-future/), 
+          to [election monitoring](https://www.nditech.org/election-monitoring-enketo).
+
+          Enketo's form engine is also available as a separate module and has been used to 
+          build several mobile applications, such as [OpenSRP](http://smartregister.org/) 
+          and [Living Goods](http://medicmobile.org/blog/we-built-the-mobile-app-health-workers-deserve). 
+      section#enketo-features
+        :marked:interpolate
+          ### Features
+
+          Surveys deployed with Enketo: 
+
+          * work **offline**
+          * have **beautiful** themes and widgets
+          * are **printer-friendly**
+          * can use very **powerful** skip and validation logic 
+          * run on **any device**, mobile or desktop, as long as it has a fairly modern browser
+      section#enketo-ecosystem
+        :marked:interpolate
+          ### Ecosystem
+
+          Enketo is part of the Open Data Kit (ODK) ecosystem. This is great for 2 reasons:
+
+            1.  Enketo can be combined with other tools to **flexibly** create a full-fledged information management system. This has resulted in the adoption of Enketo into [many systems](primary.About.Adoption). It also means that the Enketo Project can focus on **just data collection** and do this in the best way possible.
+            2.  Enketo does not require a long-term commitment by the user. In other words, it is **not trying to get you hooked**. A user can try out different data collection tools and with few headaches simply switch to an alternative in the future.
+          
+          Read more about the ecosystem [here](primary.About.OpenRosa).
+
+      section#enketo-history
+        :marked:interpolate
+          ### History
+
+          Enketo was developed as a follow-up to a 2009 Masters Dissertation at the University of Liverpool on the 'Applicability of [Offline-capable Web Technologies](http://blog.enketo.org/offline-capable-web-applications/) for Information Management in Humanitarian Aid'.
+
+          After a year of initial development, it was adopted by [a lab at Columbia University](http://qsel.columbia.edu/products-tools/) and [first launched](http://blog.enketo.org/enketo-is-now-open-source-and-will-be-used-in-formhub/) in 2012. This was the start of a cascade of [adoption](primary.About.Adoption) by companies and organizations across the world.

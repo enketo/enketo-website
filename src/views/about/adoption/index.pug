@@ -1,0 +1,23 @@
+extends ../../../templates/layout
+
+block vars
+  - var current = 'Adoption';
+
+block title
+  title Enketo Adoption
+
+block nav
+  +menu(primary.About)
+
+block main
+  article
+    .content 
+      :marked
+        ## Enketo Adopters 
+      
+        Known adopters of Enketo software or libraries:
+      
+      include ../../../templates/adopters
+
+      :marked
+        Would you like to add an adopter? Please [open an issue](https://github.com/enketo/enketo-website/issues/new).

@@ -1,0 +1,27 @@
+extends ../../../templates/layout
+
+block vars
+  - var current = 'Authentication';
+
+block title
+  title Enketo Authentication
+
+block nav
+  +menu(primary.Develop)
+
+block main
+  article
+    .content
+      h2 Authentication
+      :marked:interpolate
+        Enketo Express supports two methods of authentication:
+      
+        1. OpenRosa authentication (see [APIs](primary.Develop.APIs))
+        2. External authentication
+
+        The diagram below illustrates both forms of authentication.
+
+        ![Enketo Authentication](/media/images/authentication.png)
+
+
+      

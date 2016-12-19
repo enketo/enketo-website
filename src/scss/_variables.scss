@@ -1,0 +1,45 @@
+$font-size-base: 17px;
+
+$line-height-base: 1.42857;
+$line-height-computed: floor($font-size-base * $line-height-base);
+
+$brand-primary-color: #F15A29;
+
+//$brand-secondary-color: lighten($brand-primary-color, 50%);
+
+$orange-text: $brand-primary-color;
+
+// rgb(237, 87, 50);
+$orange-bg: rgb(242, 126, 97);
+$orange-bg-light: rgb(242, 157, 136);
+
+$content-padding: 17px;
+
+$black: black;
+$gray-darker: lighten(black, 13.5%);
+$gray-dark: lighten(black, 20%);
+$gray: lighten(black, 33.5%);
+$gray-light: lighten(black, 60%);
+$gray-lighter: lighten(black, 93.5%);
+
+$body-bg: white;
+$text-color: $gray-dark;
+
+$link-color: $brand-primary-color;
+$link-hover-color: darken($link-color, 15%);
+
+$btn-color: #6496c8;
+
+$max-width: 920px;
+$breakpoint-large: 1000px;
+$breakpoint-medium: 900px;
+$breakpoint-mediumsmall: 680px;
+$breakpoint-small: 475px;
+
+$border-color: $gray-lighter;
+$hr-border: $border-color;
+
+$rootElement: (paddingV: 5px, paddingH: 12px, border-radius: 3px);
+
+$table-cell-padding: 10px;
+$table-border-color: $gray-light;

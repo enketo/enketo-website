@@ -1,0 +1,59 @@
+.faq {
+    details {
+        margin: 10px 0;
+        padding: 0;
+
+        // large-as-possible clickable area
+        border: 1px solid $gray-lighter;
+
+        &:nth-child(even) {
+            background: $gray-lighter;
+            border-color: darken($gray-lighter, 10%);
+        }
+
+        &[open] {
+            border-left-color: transparent;
+            box-shadow: -8px 0 $brand-primary-color;
+        }
+
+        p {
+            margin-left: 18px;
+        }
+    }
+
+    summary {
+        font-weight: bold;
+        padding: 15px;
+        cursor: pointer;
+        outline: 0;
+
+        // to keep the clickable are of summary as large as possible, remove top margin of first p
+        & + p {
+            margin-top: 5px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__nav {
+        text-align: right;
+
+        ul {
+            display: inline-block;
+            text-align: center;
+            list-style: none;
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        ul + ul {
+            margin-left: 30px;
+        }
+    }
+}

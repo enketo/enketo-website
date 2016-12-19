@@ -1,0 +1,72 @@
+// No layout properties in this file -> _layout.scss
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+}
+
+.content {
+    border-bottom: 1px solid $gray-light;
+    font-size: 17px;
+
+    h3 {
+        font-weight: normal;
+        text-align: left;
+        color: black;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    h4 {
+        text-align: left;
+        color: black;
+        margin-top: 25px;
+    }
+
+    h5 {
+        color: $orange-text;
+    }
+
+    a {
+        color: $orange-text;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+section:last-of-type .content,
+article:last-of-type .content {
+    border-bottom: none;
+}
+
+.thingie {
+    color: $orange-text;
+    margin-left: .4em;
+    margin-right: .4em;
+}
+
+.alert {
+    background-color: $gray-lighter;
+    border: 1px solid $gray-light;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.right {
+    float: right;
+}
+
+.table td:not(:first-child) {
+    text-align: center;
+
+    a, .msg {
+        font-size: 14px;
+    }
+}

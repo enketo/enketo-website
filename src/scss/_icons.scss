@@ -1,0 +1,55 @@
+.icon {
+    @extend .fa;
+}
+
+.icon-github:before {
+    @extend .fa-github;
+}
+
+.icon-feed:before {
+    @extend .fa-rss;
+}
+
+.icon-twitter:before {
+    @extend .fa-twitter;
+}
+
+.icon-facebook:before {
+    @extend .fa-facebook;
+}
+
+.icon-google-plus:before {
+    @extend .fa-google-plus;
+}
+
+.icon-linkedin:before {
+    @extend .fa-linkedin;
+}
+
+.icon-mail:before {
+    @extend .fa-envelope;
+}
+
+.icon-bars:before {
+    @extend .fa-bars;
+}
+
+.icon-check:before {
+    @extend .fa-check;
+}
+
+.icon-question:before {
+    @extend .fa-question;
+}
+
+.icon-info-circle:before {
+    @extend .fa-info-circle;
+}
+
+.icon-chevron-left:before {
+    @extend .fa-chevron-left;
+}
+
+.icon-chevron-right:before {
+    @extend .fa-chevron-right;
+}

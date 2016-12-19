@@ -1,0 +1,142 @@
+extends ../../templates/layout
+
+block vars
+  - var current = 'Develop';
+
+block css
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/androidstudio.min.css")
+
+block title
+  title Develop Enketo
+
+block nav
+  +menu(primary.Develop)
+
+block main
+  article
+    .content
+      h2 Overview for Developers
+      section#libraries
+        h3 Libraries
+        p
+          | Enketo maintains 4 libraries that can be used to build an Enketo-powered application. 
+          | The illustration below shows how these 4 libraries are used as building blocks of one such application: Enketo Express.
+
+        .dev-overview
+          h4 Enketo Express
+          ul 
+             li communication with OpenRosa server
+             li persistent storage in browser
+             li applicationCache in browser
+          .dev-overview__2nd
+            .dev-overview__2nd__side client
+            h4 Enketo Core
+            ul 
+              li form rendering
+              li form logic
+              li form API
+            .dev-overview__3rd
+              h4 Enketo XPathJS
+              ul 
+                li XPath evaluation
+          .dev-overview__2nd
+            .dev-overview__2nd__side server
+            h4 Enketo Transformer
+            ul 
+              li XSL transformation of XForm
+              li markdown processsing
+              li language directionality
+              li media/data resource URI resolution
+            .dev-overview__3rd
+              h4 Enketo XSLT
+              ul
+                li XSL stylesheets
+
+        p These libraries are divided in a logical way so they can be used for light-weight mobile hybrid applications, as well as web applications. There is a lot of flexibility in using these libraries. For example you could use Enketo XSLT in your own transformer in the language of your choice. 
+
+      section#transformation
+        h3 Transformation
+        p.
+          Enketo's form engine, Enketo Core, does not read XForms directly. It works with the result of a transformation of an 
+          XForm into a JSON object containing a form HTML string and a model XML string.
+          The illustration below gives a high-level overview of this transformation.
+
+        .dev-transformation
+          .dev-transformation__main
+            .dev-transformation__main__part
+              .dev-transformation__main__part__side XForm instances
+              pre
+                code.hljs
+                  :highlight(lang='xml')
+                    <model>
+                      <instance>
+                        <data>
+                          <node/>
+                          <resp/>
+                        </data>
+                      </instance>
+                      <instance id="countries"/>
+                      ...
+                    </model>
+            .dev-transformation__main__part
+              .dev-transformation__main__part__side XForm binds
+              pre
+                code.hljs
+                  :highlight(lang='xml')
+                    <bind 
+                      nodeset="/data/node" 
+                      relevant="/data/resp = 'a'"
+                      constraint=". > 6"
+                      type="integer"
+                    />
+            .dev-transformation__main__part
+                .dev-transformation__main__part__side XForm body
+                pre
+                  code.hljs
+                    :highlight(lang='xml')
+                      <input 
+                        ref="/data/node"
+                        appearance="distress"
+                      >
+                        <label>Enter Number</label>
+                      </input>
+          .dev-transformation__arrow
+            i.fa.fa-arrow-right 
+          .dev-transformation__main
+            .dev-transformation__main__part
+              .dev-transformation__main__part__side XML instances
+              pre
+                  code.hljs
+                    :highlight(lang='xml')
+                      <model>
+                        <instance>
+                          <data>
+                            <node/>
+                            <resp/>
+                          </data>
+                        </instance>
+                        <instance id="countries"/>
+                        ...
+                      </model>
+            .dev-transformation__main__part
+              .dev-transformation__main__part__side HTML form
+              pre
+                  code.hljs
+                    :highlight(lang='xml')
+                      <form class="or">
+                        <label 
+                          class="...-distress"
+                        >
+                          <span>Enter Number</span>
+                          <input
+                            type="number"
+                            name="/data/node"
+                            data-relevant="/data/resp= 'a'"
+                            data-constraint=". > 6"
+                            data-type-xml="integer"
+                          />
+                        </label>
+                      </form>
+        :marked
+          The transformation uses [XSL](https://www.w3.org/Style/XSL/) and could theoretically be performed by any XSL Transformer in any language. 
+          It's been confirmed to work in PHP and NodeJS.

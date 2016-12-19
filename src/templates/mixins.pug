@@ -1,0 +1,28 @@
+- 
+  sites['enketo-main'] = '';
+
+  var getActives = function(obj, name){
+    var actives = [name];
+    for( var key in obj) {
+      if (typeof obj[key] === 'object' && obj[key][name]) {
+        if (actives.indexOf(key) === -1){
+          actives.push(key);
+          // TODO: avoids showing both Use and Develop for FAQ page. This is not a proper solution though as it will only show the first
+          // matching item in the properties.
+          // It might be better to let current be "Use.FAQ" instead of "FAQ", or ["Use", "FAQ"]
+          break;
+        }
+      }
+    }
+    return actives;
+  }
+
+mixin menu(obj)
+  - var actives = getActives(obj, current);
+
+  ul 
+    each val, key in obj
+      - var link = typeof val === 'object' ? val._self : (key !== '_self' ? val : null);     
+      if link
+        li(class=(actives.indexOf(key) !== -1 ? 'active' : ''))
+          a(href=interpolate(link))= key

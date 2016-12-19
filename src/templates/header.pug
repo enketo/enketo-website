@@ -1,0 +1,10 @@
+header.header
+  .content-ui
+    a.header__branding(href= interpolate("#{enketo-main}/"))
+      img(src= interpolate("#{enketo-main}/media/images/logos/enketo_bare_white_150x56.png"), alt="Enketo Logo")
+    nav.header__primary-navbar
+      input#collapse(type="checkbox") 
+      label(for="collapse")
+        i.icon.icon-bars
+      +menu(primary)
+

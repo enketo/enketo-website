@@ -1,0 +1,23 @@
+extends ../../../templates/layout
+
+block vars
+  - var current = 'Contact';
+
+block title
+  title Contact Enketo
+
+block nav
+  +menu(primary.About)
+
+block main
+  article
+    .content
+      :marked:interpolate
+        ## Contact
+        
+        The Enketo team can be contacted via:
+       
+        * [GitHub](sites['enketo-code'])
+        * [email](mailto:info@enketo.org)
+        * [twitter](https://twitter.com/enketo)
+

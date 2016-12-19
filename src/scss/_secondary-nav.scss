@@ -1,0 +1,39 @@
+.secondary-nav {
+    background: $gray-lighter;
+    border-bottom: 1px solid $gray-light;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        padding: 5px 0;
+        justify-content: flex-start;
+    }
+
+    li {
+        display: inline-block;
+        transition: all .5s;
+        white-space: nowrap;
+
+        &:not(.active):hover {
+            background: $gray-light;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 3px 15px;
+            color: $gray;
+            text-decoration: none;
+        }
+
+        &.active a {
+            color: lighten($brand-primary-color, 10%);
+        }
+    }
+}
