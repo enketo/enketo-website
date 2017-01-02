@@ -1,0 +1,3 @@
+# CORS on font files
+/media/fonts/*
+	Access-Control-Allow-Origin: *
