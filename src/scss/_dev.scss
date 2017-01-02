@@ -78,8 +78,7 @@
     &__main {
         display: flex;
         flex-direction: column;
-
-        //flex: 1;
+        flex: 1 1 100px;
 
         &__part {
             flex: 1 1 120px;
