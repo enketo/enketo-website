@@ -11,7 +11,7 @@
         "test": "jshint src/js/all.js && npm run build",
         "prepublish": "npm run build",
         "clean": "if [ -d \"public\" ]; then rm -R public ; fi; mkdir public; mkdir public/js",
-        "copy": "cp -R src/media public/media",
+        "copy": "cp -R src/media public/media && cp -f src/js/navigation.json public/js/",
         "sitemap": "node ./tools/sitemap.js",
         "js": "browserify src/js/all.js -o public/js/all.js -t babelify",
         "pug": "pug -O src/js/options.js src/views -o public",
