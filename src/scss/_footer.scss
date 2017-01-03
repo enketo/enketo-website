@@ -12,10 +12,10 @@
             width: 68px;
             margin-left: -10px;
         }
+    }
 
-        a:hover {
-            background: none;
-        }
+    .footer__branding a:hover {
+        background: none;
     }
 
     &__social {
@@ -24,9 +24,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-end;
-
-        //justify-content: space-between;
-   
     }
 
     &__copyright {
