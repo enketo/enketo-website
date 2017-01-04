@@ -78,8 +78,46 @@ function detailChangeHandler( event ) {
 }
 
 function setHeaderListeners() {
-    let headers = document.querySelectorAll( 'h1, h2, h3, h4, h5, h6' );
+    let headers = document.querySelectorAll( 'h3' );
     addListeners( headers, 'click', headerClickHandler );
+    addClickableClass( headers );
+}
+
+/**
+ * Adds class "clickable" to all elements in NodeList.
+ * 
+ * @param {NodeList} headers list of HTML Elements
+ */
+function addClickableClass( elements ) {
+    let element;
+
+    if ( elements ) {
+        for ( element of elements ) {
+            if ( getCLosestAncestorWithId( element ) ) {
+                element.classList.add( 'clickable' );
+            }
+        }
+    }
+}
+
+/**
+ * Return the closest ancestor that has an id attribute.
+ * For performance reasons (and not needing more), we search up to 2 parents.
+ * 
+ * @param  {Element} el element
+ * @return {Element}    closest element with id or null
+ */
+function getCLosestAncestorWithId( el ) {
+    let parent = el.parentElement;
+    let grandParent = ( parent ) ? parent.parentElement : null;
+    let foundElement = null;
+
+    if ( parent && parent.id ) {
+        foundElement = parent;
+    } else if ( grandParent && grandParent.id ) {
+        foundElement = grandParent;
+    }
+    return foundElement;
 }
 
 /** 
@@ -88,14 +126,9 @@ function setHeaderListeners() {
  * @param  {Event]} event
  */
 function headerClickHandler( event ) {
-    let parent = event.currentTarget.parentElement;
-    if ( parent ) {
-        if ( !parent.id ) {
-            parent = parent.parentElement;
-        }
-        if ( parent.id ) {
-            setHash( parent.id );
-        }
+    let section = getCLosestAncestorWithId( event.currentTarget );
+    if ( section ) {
+        setHash( section.id );
     }
 }
 

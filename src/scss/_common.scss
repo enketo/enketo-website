@@ -70,3 +70,19 @@ article:last-of-type .content {
         font-size: 14px;
     }
 }
+
+.clickable:hover {
+    cursor: pointer;
+
+    &:before {
+        @extend .icon;
+
+        @extend .icon-link;
+
+        color: $gray-light;
+        font-size: 0.6em !important;
+        margin-left: -1em;
+        width: 1em;
+        vertical-align: middle;
+    }
+}
