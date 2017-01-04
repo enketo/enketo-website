@@ -5,6 +5,12 @@
     }
 }
 
+#samples, #tools, #use {
+    .content {
+        border-bottom: 1px solid $gray-light;
+    }
+}
+
 .attract {
     background-color: rgb(230, 230, 230);
 

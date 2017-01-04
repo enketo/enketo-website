@@ -6,7 +6,6 @@ html {
 }
 
 .content {
-    border-bottom: 1px solid $gray-light;
     font-size: 17px;
 
     h3 {
@@ -39,11 +38,6 @@ html {
     img {
         max-width: 100%;
     }
-}
-
-section:last-of-type .content,
-article:last-of-type .content {
-    border-bottom: none;
 }
 
 .thingie {
