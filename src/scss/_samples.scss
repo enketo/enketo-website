@@ -107,7 +107,7 @@
 }
 
 // Show 2 samples at a time
-@media screen and (max-width: $breakpoint-mediumsmall) {
+@media screen and (max-width: 742px) {
     $margin: 25px;
     $width: calc((100% - 1 * #{$margin} ) / 2);
 
@@ -122,7 +122,7 @@
 }
 
 // Show 1 sample at a time
-@media screen and (max-width: $breakpoint-small) {
+@media screen and (max-width: 415px) {
     $margin: 25px;
     $width: 100%;
 
