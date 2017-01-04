@@ -80,7 +80,7 @@ block main
           [the new KoBoForm](http://kobotoolbox.org) to construct forms. Another tool is 
           [ODK Build](http://build.opendatakit.org).
         
-          ODK build has the shortest learning curve. It is, however, not suitable for users that require complex or long forms, and a major disadvantage is that forms created with ODK Build cannot be deployed anywhere, e.g. not on KoBo and Ona.
+          ODK build has the shortest learning curve. It is, however, not suitable for users that require complex or long forms, and a major disadvantage is that forms created with ODK Build cannot be deployed everywhere, e.g. not on KoBo and Ona.
         
           XLSForm is a bit harder to learn, but a key advantage is that after the initial learning curve, it becomes very easy to build and maintain forms. Another advantage is that forms created with XSLForms can be deployed anywhere in the OpenRosa ecosystem.
         
@@ -117,12 +117,13 @@ block main
               td
                 span.icon.icon-check
             tr 
-              td Specialized Single Submission view
+              td Dedicated 
+                a(href='https://blog.enketo.org/single-submission-surveys/') Single Submission view
               td
                 span.icon.icon-check
               td
             tr
-              td Easy installation + updates
+              td Easy installation + updates on user device
               td
                 span.icon.icon-check
               td
@@ -193,7 +194,7 @@ block main
                 span.icon.icon-check
               td
             tr
-              td Page-by-page mode
+              td: a(href='https://blog.enketo.org/pages/') Page-by-page mode
               td
                 span.icon.icon-check
               td
@@ -241,7 +242,9 @@ block main
               td
                 a(href='https://groups.google.com/forum/#!topic/opendatakit-developers/9_VZoe7crVY') incompatible
             tr
-              td Referring to external data directly from any relevant, calculation, constraint, required expression
+              td Querying 
+                a(href=interpolate(primary.Develop.XForms)+'#external-data') external data 
+                in any XPath expression just like internal data.
               td
                 span.icon.icon-check
               td
