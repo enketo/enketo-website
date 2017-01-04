@@ -73,10 +73,24 @@ html {
 
         @extend .icon-link;
 
+        $s: 21px;
+
         color: $gray-light;
-        font-size: 0.6em !important;
-        margin-left: -1em;
-        width: 1em;
+        font-size: 18px !important;
+        margin-left: -$s;
+        width: $s;
         vertical-align: middle;
+        padding-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .clickable:hover:before {
+        $s: 15px;
+
+        font-size: 16px !important;
+        margin-left: -$s;
+        width: $s;
+        padding-bottom: 4px;
     }
 }
