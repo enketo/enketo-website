@@ -1,3 +1,5 @@
-/formtester/    /formtester/    410
-/forms/         /forms/         410
-/webform/*      /webform/       404
+# This is using a trick to let netlify consider the to and from to be different
+/formtester/      /formtester/index.html      410
+/forms/           /forms/index.html           410
+/webform/         /webform/index.html         410
+/webform/preview  /webform/preview/index.html 410
