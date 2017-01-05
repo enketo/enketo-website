@@ -28,11 +28,11 @@ block main
 
       details.dev.use#open-source 
         summary Is Enketo open source?
-        :marked:interpolate
+        :md
           Yes it is! The source code is [here](primary.Develop.Code).
       details.use#offline-use
         summary How can Enketo (Express) work offline?
-        :marked:interpolate
+        :md
           The first time you load any Enketo Express survey, a copy of the app and survey are stored in the browser. An icon will be 
           shown in the top left of your screen to confirm that it has 
           been stored.  From that point onwards you 
@@ -47,38 +47,38 @@ block main
           this [technical faq](./#offline-tech). 
       details.dev#license
         summary What software license is Enketo provided under?
-        :marked:interpolate
+        :md
           See license details for each Enketo app and library in the README.md files of 
           [each repository](primary.Develop.Code) each repository.
       details.use.dev#browsers
         summary What browsers are supported and recommended?
-        :marked
+        :md
           All popular modern browsers are supported and recommended on all platforms except on iOS. They are: Chrome, Firefox, and Edge. 
           
           In addition, a couple of non-modern browsers are supported, ie. Safari and Internet Explorer 11. On iOS, modern browsers 
           are sadly not allowed by Apple. For example, Chrome on iOS is just the Apple-provided form engine with few missing features and a Chrome _skin_ - it is not the _real Chrome_. Therefore, on iOS only, we have no choice but to recommend Safari.
       details.use.dev#name
         summary What does "Enketo" mean and how is it pronounced?
-        :marked
+        :md
           Enketo means "survey" in [Esperanto](https://en.wikipedia.org/wiki/Esperanto). 
 
           We are not sure how to properly pronounce it in Esperanto but you could say [\in-ˈke-tō]. The first "e" and second "e" should be pronounced the same because each letter has only one pronounciation in Esperanto. (How cool is that!)
       details.use.dev#sustain
         summary How is this project funded and sustained?
-        :marked:interpolate
+        :md
           The development of Enketo libraries and apps is supported by code contributors and financial contributions by 
           companies and organizations that have adopted Enketo. These organizations are providing Enketo-powered tools as part of 
           their own information management products.
       details.dev#offline-tech
         summary What are the technologies used for offline capabilities of Enketo (Express)?
-        :marked
+        :md
           The app itself is cached in the browser using the Application Cache. In the future, when browser support becomes widespread, 
           we plan to switch to Service Workers.
         
           The data, form, and form resources are stored in the browser using indexedDb.
       details.dev#enketo-core-diff
         summary What is the difference between Enketo Express and Enketo Core?
-        :marked:interpolate
+        :md
           Enketo Core is a library that contains Enketo's form engine. It is not an app by itself but a minimal and not-very-opinionated 
           building block that can be used to create Enketo-powered apps. 
         
@@ -89,7 +89,7 @@ block main
 
       details.use.dev#form-format
         summary What is the form format that Enketo supports?
-        :marked:interpolate
+        :md
 
           Enketo supports only one form format and that is the widely adopted, open-source [OpenRosa XForms format](primary.Develop.XForms). 
 
@@ -98,7 +98,7 @@ block main
           
       details.dev.use#openclinica-relation
         summary What is the relationship between OpenClinica and Enketo?
-        :marked:interpolate
+        :md
           OpenClinica is using Enketo throughout its platform. It is the major sponsor of Enketo and directly responsible for 
           many of its features. 
       details.dev.use#odk-relation
@@ -115,33 +115,33 @@ block main
           | . In addition Enketo is actively involved in proposing and discussing additions and changes to the specifications in the ODK Developers' fora.
       details.dev.use#kobo-relation
         summary What is the relationship between Enketo and KoBoToolbox?
-        :marked:interpolate
+        :md
           Enketo Express is an integral part of [kobotoolbox.org](http://kobotoolbox.org) and KoBoToolbox has historically sponsored a 
           large chunk of Enketo Express' development. It still provides code, emotional support, and funding for bug fixes.
       details.dev.use#ona-relation
         summary What is the relationship between Enketo and Ona?
-        :marked
+        :md
           Enketo Express is an integral part of [ona.io](https://ona.io). Ona has historically played a major role in Enketo's 
           development and design. Ona still contributes code, sponsorship, emotional support, and translations to Enketo.
       details.dev.use#translation
         summary Can I help translate Enketo Express?
-        :marked:interpolate
+        :md
           Please do! Request [here](https://www.transifex.com/enketo/enketo-express) to be added to an existing language or to request for a new language to be added.
       details.use#formtester
         summary Where is the old "enketo.org/formtester" page?
-        :marked
+        :md
           The old enketo.org website hosted the old Enketo web application that allowed any user to show webform previews. The new enketo.org website is a content-only website dedicated to describing the Enketo open-source project.
 
           The new Enketo web application does not offer an easy way to directly upload an XForm and preview this. If you are using XLSForm, please see [this FAQ](./#previews).
       details.use#forms-app
         summary Where is the old "enketo.org/forms" page?
-        :marked:interpolate
+        :md
           The old enketo.org website hosted the old Enketo web application that had a crude "forms" application. The new enketo.org website is a content-only website dedicated to describing the Enketo open-source project. 
 
           To get a similar functionality as the old "forms" application we recommend using one of the all-in-one [services](primary.About.Adoption).
       details.use#previews
         summary Why did my form previews stop working?
-        :marked:interpolate
+        :md
           The old enketo.org website hosted the old Enketo web application that allowed any user to show webform previews. The new enketo.org website is a content-only website dedicated to describing the Enketo open-source project. 
 
           To use Enketo webform previews you could use the new Enketo Express application. For example, use the [ODK XLSForm service](http://opendatakit.org/xiframe) or one of [these options](primary.Use.Options).

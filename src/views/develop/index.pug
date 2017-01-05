@@ -4,7 +4,7 @@ block vars
   - var current = 'Develop';
 
 block css
-  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/androidstudio.min.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/androidstudio.min.css")
 
 block title
   title Develop Enketo
@@ -65,78 +65,78 @@ block main
           .dev-transformation__main
             .dev-transformation__main__part
               .dev-transformation__main__part__side XForm instances
-              pre
-                code.hljs
-                  :highlight(lang='xml')
-                    <model>
-                      <instance>
-                        <data>
-                          <node/>
-                          <resp/>
-                        </data>
-                      </instance>
-                      <instance id="countries"/>
-                      ...
-                    </model>
+              :md
+                ```xml
+                <model>
+                  <instance>
+                    <data>
+                      <node/>
+                      <resp/>
+                    </data>
+                  </instance>
+                  <instance id="countries"/>
+                  ...
+                </model>
+                ```
             .dev-transformation__main__part
               .dev-transformation__main__part__side XForm binds
-              pre
-                code.hljs
-                  :highlight(lang='xml')
-                    <bind 
-                      nodeset="/data/node" 
-                      relevant="/data/resp = 'a'"
-                      constraint=". > 6"
-                      type="integer"
-                    />
+              :md
+                ```xml
+                <bind 
+                  nodeset="/data/node" 
+                  relevant="/data/resp = 'a'"
+                  constraint=". > 6"
+                  type="integer"
+                />
+                ```
             .dev-transformation__main__part
                 .dev-transformation__main__part__side XForm body
-                pre
-                  code.hljs
-                    :highlight(lang='xml')
-                      <input 
-                        ref="/data/node"
-                        appearance="distress"
-                      >
-                        <label>Enter Number</label>
-                      </input>
+                :md
+                  ```xml
+                  <input 
+                    ref="/data/node"
+                    appearance="distress"
+                  >
+                    <label>Enter Number</label>
+                  </input>
+                  ```
           .dev-transformation__arrow
             i.fa.fa-arrow-right 
           .dev-transformation__main
             .dev-transformation__main__part
               .dev-transformation__main__part__side XML instances
-              pre
-                  code.hljs
-                    :highlight(lang='xml')
-                      <model>
-                        <instance>
-                          <data>
-                            <node/>
-                            <resp/>
-                          </data>
-                        </instance>
-                        <instance id="countries"/>
-                        ...
-                      </model>
+              :md
+                ```xml  
+                <model>
+                  <instance>
+                    <data>
+                      <node/>
+                      <resp/>
+                    </data>
+                  </instance>
+                  <instance id="countries"/>
+                  ...
+                </model>
+                ```
             .dev-transformation__main__part
               .dev-transformation__main__part__side HTML form
-              pre
-                  code.hljs
-                    :highlight(lang='xml')
-                      <form class="or">
-                        <label 
-                          class="...-distress"
-                        >
-                          <span>Enter Number</span>
-                          <input
-                            type="number"
-                            name="/data/node"
-                            data-relevant="/data/resp= 'a'"
-                            data-constraint=". > 6"
-                            data-type-xml="integer"
-                          />
-                        </label>
-                      </form>
-        :marked
+              :md
+                ```xml
+                <form class="or">
+                  <label 
+                    class="...-distress"
+                  >
+                    <span>Enter Number</span>
+                    <input
+                      type="number"
+                      name="/data/node"
+                      data-relevant="/data/resp= 'a'"
+                      data-constraint=". > 6"
+                      data-type-xml="integer"
+                    />
+                  </label>
+                </form>
+                ```
+        :md
           The transformation uses [XSL](https://www.w3.org/Style/XSL/) and could theoretically be performed by any XSL Transformer in any language. 
           It's been confirmed to work in PHP and NodeJS.

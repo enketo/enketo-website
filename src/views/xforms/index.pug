@@ -15,7 +15,7 @@ block nav
 block main
   article
     .content
-      :marked:interpolate
+      :md
         ## XForms
         
         Enketo supports the [ODK/OpenRosa XForms format](sites['enketo-xform-spec']). 
@@ -23,23 +23,21 @@ block main
         See the [Form Building](primary.Use.Forms) section for guidance on creating compatible survey forms.
         
       section#external-data
-        :marked:interpolate
+        :md
           ### External Data
          
           Enketo has extended the XForms spec by providing the ability to add external data in a very flexible manner. This method was lifted from the [CommCare XForms Specification](https://dimagi.github.io/xform-spec/). We are hopeful this method will become part of the common ODK/OpenRosa specification eventually.
 
           Secondary instances obtain data from an _external_ source. The external source can be static or dynamic and is specified using the additional `src` attribute with a URI value on an empty `<instance>` node. Querying an external instance is done in exactly the same way as for an _internal_ secondary instance.
 
-        pre
-          code.hljs
-            :highlight(lang='xml')
-              <instance id="households" src="jr://file/households.xml"/>
+          ```xml    
+          <instance id="households" src="jr://file/households.xml"/>
+          ```
 
-        :marked:interpolate
           The `jr://file` connector can be used for a generic (any) XML document. In addition, there is support for external CSV files using the `jr://file-csv` connector.
           
       section#csv-support
-        :marked:interpolate
+        :md
           ### External CSV Data
 
           If an external CSV file is added as an external instance, Enketo will use a fixed CSV-to-XML transformation to facilitate querying this data in any XPath expression. This transformation is identical to the transformation performed by [pyxform](https://github.com/xlsform/pyxform), as illustrated below.
@@ -52,32 +50,28 @@ block main
 
           The above table is transformed into the following XML (children of `<instance id="households"/>`):
 
-        pre
-          code.hljs
-            :highlight(lang='xml')
-              <root>
-                <item>
-                  <name>0001</name>
-                  <label>Johnson</label>
-                  <rooms>2</rooms>
-                </item>
-                <item>
-                  <name>0034</name>
-                  <label>Doe</label>
-                  <rooms>5</rooms>
-                </item>
-                <item>
-                  <name>0021</name>
-                  <label>Rijdt</label>
-                  <rooms>1</rooms>
-                </item>
-              </root>
+          ```xml
+          <root>
+            <item>
+              <name>0001</name>
+              <label>Johnson</label>
+              <rooms>2</rooms>
+            </item>
+            <item>
+              <name>0034</name>
+              <label>Doe</label>
+              <rooms>5</rooms>
+            </item>
+            <item>
+              <name>0021</name>
+              <label>Rijdt</label>
+              <rooms>1</rooms>
+            </item>
+          </root>
+          ```
 
-        p  This means that the CSV file can be queried just like an XML document using regular XPath. For example, to count all households with more than 1 room:
+          This means that the CSV file can be queried just like an XML document using regular XPath. For example, to count all households with more than 1 room:
 
-        pre
-          code.hljs
-            :highlight(lang='xml')
-              <bind nodeset="..." calculate="count(instance('households')/root/item[rooms > 1])" />
-
-
+          ```xml   
+          <bind nodeset="..." calculate="count(instance('households')/root/item[rooms > 1])" />
+          ```
