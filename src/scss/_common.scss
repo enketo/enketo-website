@@ -14,6 +14,9 @@ html {
         color: black;
         margin-bottom: 20px;
         margin-top: 40px;
+        &::after {
+            @extend .chevrons;
+        }
     }
 
     h4 {
@@ -40,7 +43,9 @@ html {
     }
 }
 
-.thingie {
+.chevrons::after {
+    display: inline-block;
+    content: '»';
     color: $orange-text;
     margin-left: .4em;
     margin-right: .4em;

@@ -60,6 +60,10 @@
 .features {
     h3 {
         color: white;
+
+        &::after {
+            display: none;
+        }
     }
 
     padding-top: 2em;

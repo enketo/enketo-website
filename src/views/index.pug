@@ -34,37 +34,33 @@ block main
         .desc Printer friendly
   section#samples
     .content
-      h3
-        | Enketo Smart Paper In Action
-        span.thingie »
+      :md
+        ### Enketo Smart Paper In Action
       include ../templates/samples
   section#tools
     .content
-      h3
-        | Products That Use Enketo
-        span.thingie »
+      :md
+        ### Products That Use Enketo
       include ../templates/adopters
   section#use.use
     .content
-      h3
-        | How to Use Enketo
-        span.thingie »
-      .alert
-        | Want to learn more about the ecosystem Enketo is part of? 
-        span.thingie »
-        | Read the 
-        a(href=interpolate(primary.About.OpenRosa)) introduction
-        | .
+      :md
+        ### How to Use Enketo
+      .alert Want to learn more about the ecosystem Enketo is part of? 
+        span.chevrons 
+        span Read the 
+          a(href=interpolate(primary.About.OpenRosa)) introduction
+          | .
       p There are 3 ways you can use Enketo:
       include ../templates/use
   section#about.about
     .content
-      h3
-        | About Us
-        span.thingie »
-      p The Enketo project is brought to you by open-source contributors and by 
-        a(href='https://www.linkedin.com/company/enketo-llc') Enketo LLC
-        |  with the generous support of its partners and sponsors: 
+      :md
+        ### About Us
+      
+        The Enketo project is brought to you by open-source contributors and by [Enketo LLC](https://www.linkedin.com/company/enketo-llc) with the generous support of its partners and sponsors: 
+      
       include ../templates/sponsors
-      p Enketo LLC is based in Denver, CO (USA). Its mission is to develop advanced offline-capable web tools for people working 
-        | in conditions where Internet access is intermittent.
+      :md
+        Enketo LLC is based in Denver, CO (USA). Its mission is to develop advanced offline-capable web tools for people working 
+        in conditions where Internet access is intermittent.
