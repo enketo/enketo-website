@@ -31,14 +31,14 @@ lookupNavItem = ( keyStr ) => {
     return keyStr.replace( /(primary|sites)(\.|\[).+/, ( match ) => {
         let item = navigation;
         let props = match.split(   /\s*\.|\[\s*&quot;|&quot;\s*\]|\[\s*&#39;|&#39;\s*\]\s*/ );
-
+        
         props.forEach( ( prop ) => {
-            if (prop) {
-                item = item && item[ prop ] ? item[ prop ] : null;
-            }
+            if ( prop ) {
+                item = item && typeof item[ prop ] !== 'undefined' ? item[ prop ] : null;
+            } 
         } );
 
-        if (!item) {
+        if (typeof item === 'undefined' || item === null ) {
             throw new Error('Trouble finding link: ' + match);
         }
 
