@@ -1,10 +1,9 @@
 Enketo Website
 ================
 
-Install prerequisites with `npm install`. You may need to install `pug-cli`, `node-sass` and `browserify` globally or add to PATH. 
+## Build
 
-Build with `npm run build` and serve from /public.
-
+Install prerequisites with `npm install`. Build with `npm run build` and serve from /public.
 
 ## Develop
 
@@ -18,6 +17,9 @@ When adding a link, see if it is already included in /src/js/navigation.json and
 
 Feedback and contributions are welcome, even if it's just a spelling error. Please [open an issue](https://github.com/enketo/enketo-website/issues/new) or send a PR.
 
+## License
+
+See [LICENSE.md](./LICENSE.md). Images, graphic design, and branding used in this repository does not fall under in this license.
 
 ## Acknowledgements
 
