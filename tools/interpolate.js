@@ -1,5 +1,5 @@
 'use strict';
-let navigation = require( './navigation' );
+let navigation = require( '../src/js/navigation' );
 
 module.exports = ( text ) => {
     if ( typeof text === 'string' ) {

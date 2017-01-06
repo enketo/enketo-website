@@ -1,10 +1,10 @@
 'use strict';
 
-let navigation = require( './navigation' );
+let navigation = require( '../src/js/navigation' );
 let interpolate = require( './interpolate' );
 let hljs = require( 'highlight.js' );
 let marked = require( 'marked' );
-let pkg = require( '../../package' );
+let pkg = require( '../package' );
 let renderer = new marked.Renderer();
 let lookupNavItem;
 let replaceIcons;

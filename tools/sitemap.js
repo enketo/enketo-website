@@ -1,7 +1,7 @@
 'use strict';
 
 const navigation = require( '../src/js/navigation' );
-const interpolate = require( '../src/js/interpolate' );
+const interpolate = require( './interpolate' );
 const fs = require( 'fs' );
 const path = require( 'path' );
 const sitemapPath = path.join( process.cwd(), '/public/sitemap.xml' );
