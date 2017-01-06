@@ -93,168 +93,34 @@ block main
           [ODK Collect](https://play.google.com/store/apps/details?id=org.odk.collect.android) 
           (there are also various tools that are based on ODK Collect which are grouped together for this comparison). The options are *complementary*, and it is recommended to decide on a survey-to-survey basis which is the most suitable. The following table demonstrates the key differences:
         
-        table.table
-          thead
-            tr
-              td
-              td Enketo (web)
-              td ODK Collect
-          tbody
-            tr
-              td Web (any device)
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Android mobile app
-              td
-              td
-                span.icon.icon-check
-            tr
-              td Works offline
-              td
-                span.icon.icon-check
-              td
-                span.icon.icon-check
-            tr 
-              td Dedicated 
-                a(href='https://blog.enketo.org/single-submission-surveys/') Single Submission view
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Easy installation + updates on user device
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Barcode scanning
-              td
-              td
-                span.icon.icon-check
-            tr
-              td Drawings and signature input
-              td
-              td
-                span.icon.icon-check
-            tr
-              td
-                a(href='http://blog.enketo.org/likert-widget/') Likert scales
-              td
-                span.icon.icon-check
-              td
-            tr
-              td
-                a(href='http://blog.enketo.org/distress/') Distress input
-              td
-                span.icon.icon-check
-              td
-            tr
-              td
-                a(href='http://blog.enketo.org/geo/') Geotrace and geoshape inputs
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Analog scale inputs
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Comment widget
-              td
-                span.icon.icon-check
-              td
-            tr
-              td
-                | Linking with 
-                a(href='https://opendatakit.org/help/form-design/external-apps/') external mobile apps
-              td
-              td
-                span.icon.icon-check
-            //
-              <tr>
-              <td>Support for <a href="http://blog.enketo.org/better-notes/">text formatting and links</a></td>
-              <td><span class="glyphicon glyphicon-ok"></span></td>
-              <td></td>
-              </tr>
-            tr
-              td Large text input
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Additional paper + pencil collection workflow support
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Full-form-as-one-page mode
-              td
-                span.icon.icon-check
-              td
-            tr
-              td: a(href='https://blog.enketo.org/pages/') Page-by-page mode
-              td
-                span.icon.icon-check
-              td
-                span.icon.icon-check
-            tr
-              td Transport encryption
-              td
-                span.icon.icon-check
-              td
-                span.icon.icon-check
-            tr
-              td Local encryption
-              td
-              td
-                span.icon.icon-check
-            tr
-              td
-                a(href='http://blog.enketo.org/auto-save/') Automatic saving
-              td
-                span.icon.icon-check
-              td 
-                span.icon.icon-question
-            tr
-              td Embedding forms into any webpage
-              td
-                span.icon.icon-check
-              td
-            tr
-              td
-                | Retaining 
-                strong submitted
-                |  data locally
-              td
-              td
-                span.icon.icon-check
-            tr
-              td Setting default values dynamically via API
-              td
-                span.icon.icon-check
-              td
-            tr
-              td Creating choice lists from external data
-              td
-                a(href='https://groups.google.com/forum/#!topic/opendatakit-developers/9_VZoe7crVY') incompatible
-              td
-                a(href='https://groups.google.com/forum/#!topic/opendatakit-developers/9_VZoe7crVY') incompatible
-            tr
-              td Querying 
-                a(href=interpolate(primary.Develop.XForms)+'#external-data') external data 
-                in any XPath expression just like internal data.
-              td
-                span.icon.icon-check
-              td
-            tr
-              td
-                | Multiple 
-                a(href='http://blog.enketo.org/gorgeous-grid/') themes
-              td
-                span.icon.icon-check
-              td
+          |                                            |  Enketo (web)  |  ODK Collect  |
+          |--------------------------------------------|----------------|---------------|
+          | Web (any device)                           | :check:        |               |
+          | Android mobile app                         |                | :check:       |               
+          | Works offline                              | :check:        | :check:       |
+          | Dedicated [Single Submission view](https://blog.enketo.org/single-submission-surveys/)| :check: | |
+          | Easy installation + updates on user device | :check:        |               |
+          | Barcode scanning                           |                | :check:       |
+          | Drawings and signature input               |                | :check:       |
+          | [Likert scales](http://blog.enketo.org/likert-widget/) | :check: |          | 
+          | [Distress input](http://blog.enketo.org/distress/) | :check: |              | 
+          | [Geoshape and geotrace inputs](http://blog.enketo.org/geo/) | :check: |     | 
+          | Analog scale inputs                        | :check:        |               |  
+          | Comment widget                             | :check:        |               | 
+          | Linking with [external mobile apps](https://opendatakit.org/help/form-design/external-apps/)| | :check: |
+          | Large text input                           | :check:        |               |
+          | Additional paper + pencil collection workflow support | :check:|            |
+          | Full-form-as-one-page mode                 | :check:        |               |  
+          | [Page-by-page mode](https://blog.enketo.org/pages/) | :check: | :check:     |
+          | transport encryption                       | :check:        | :check:       |
+          | Local encryption                           |                | :check:       | 
+          | [Automatic saving](http://blog.enketo.org/auto-save/) | :check: |:question: |
+          | Embedding forms into any webpage           | :check:        |               | 
+          | Retaining **submitted** data locally       |                | :check:       |
+          | Setting default values dynamically via API | :check:        |               |
+          | Creating choice lists from external data   | [incompatible](https://groups.google.com/forum/#!topic/opendatakit-developers/9_VZoe7crVY) | [incompatible](https://groups.google.com/forum/#!topic/opendatakit-developers/9_VZoe7crVY) |
+          | Querying [external data](/xforms#external-data) in any XPath expression just like internal data. |:check: | | 
+          | Multiple [themes](http://blog.enketo.org/gorgeous-grid/) | :check: |        |
       section#analysis
         :md
           ### Data Analysis
