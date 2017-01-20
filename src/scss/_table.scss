@@ -12,10 +12,6 @@ caption {
     text-align: left;
 }
 
-th {
-    text-align: left;
-}
-
 // Baseline styles
 
 table {
@@ -34,6 +30,10 @@ table {
                 line-height: $line-height-base;
                 vertical-align: top;
                 border-top: 1px solid $table-border-color;
+
+                &:not(:first-child) {
+                    text-align: center;
+                }
             }
         }
     }

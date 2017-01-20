@@ -1,0 +1,7 @@
+#csv-support {
+    th, td {
+        &:first-of-type {
+            text-align: center;
+        }
+    }
+}

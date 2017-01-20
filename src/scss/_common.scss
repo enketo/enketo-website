@@ -62,14 +62,6 @@ html {
     float: right;
 }
 
-table td:not(:first-child) {
-    text-align: center;
-
-    a, .msg {
-        font-size: 14px;
-    }
-}
-
 .clickable:hover {
     cursor: pointer;
 
