@@ -9,8 +9,8 @@
 
     &__branding {
         img {
-            width: 68px;
-            margin-left: -25px;
+            width: 75px;
+            margin-left: -15px;
         }
     }
 
@@ -19,11 +19,25 @@
     }
 
     &__social {
-        flex: 1;
+        flex: 1 1 205px;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-end;
+        align-items: center;
+
+        a {
+            font-size: 35px;
+            color: $gray-lighter;
+            padding: 5px;
+            margin: 5px;
+            text-decoration: none;
+
+            &:hover {
+                background: $gray;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__copyright {
@@ -33,16 +47,37 @@
         margin: 10px 0 -10px 0;
     }
 
-    a {
-        font-size: 35px;
-        color: $gray-lighter;
-        padding: 5px;
-        margin: 5px 5px 0 5px;
-        text-decoration: none;
+    &__navbar {
+        flex: 3 3 200px;
 
-        &:hover {
-            background: $gray;
-            text-decoration: underline;
+        ul {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+
+            // Safari requires a min-height
+            min-height: 75px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:link, &:visited {
+                color: $gray-lighter;
+            }
         }
     }
 }
