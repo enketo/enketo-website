@@ -9,6 +9,9 @@
     li {
         margin-left: 25px;
         margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
         img {
             max-width: 240px;
