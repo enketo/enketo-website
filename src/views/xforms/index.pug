@@ -18,24 +18,18 @@ block main
         Enketo supports the [ODK/OpenRosa XForms format](sites['enketo-xform-spec']). 
 
         See the [Form Building](primary.Use.Forms) section for guidance on creating compatible survey forms.
-        
-      section#external-data
-        :md
-          ### External Data
-         
-          Enketo has extended the XForms spec by providing the ability to add external data in a very flexible manner. This method was lifted from the [CommCare XForms Specification](https://dimagi.github.io/xform-spec/). We are hopeful this method will become part of the common ODK/OpenRosa specification eventually.
-
-          Secondary instances obtain data from an _external_ source. The external source can be static or dynamic and is specified using the additional `src` attribute with a URI value on an empty `<instance>` node. Querying an external instance is done in exactly the same way as for an _internal_ secondary instance.
-
-          ```xml    
-          <instance id="households" src="jr://file/households.xml"/>
-          ```
-
-          The `jr://file` connector can be used for a generic (any) XML document. In addition, there is support for external CSV files using the `jr://file-csv` connector.
           
       section#csv-support
         :md
           ### External CSV Data
+
+          Enketo supports the XForms specification for adding [external XML data](https://opendatakit.github.io/xforms-spec/#secondary-instances---external) using the `jr://file` connector. 
+
+          In addition, Enketo has support for external CSV files using the `jr://file-csv` connector. We are hopeful this method will become part of the common ODK/OpenRosa specification eventually.
+
+          ```xml    
+          <instance id="households" src="jr://file-csv/households.csv"/>
+          ```
 
           If an external CSV file is added as an external instance, Enketo will use a fixed CSV-to-XML transformation to facilitate querying this data in any XPath expression. This transformation is identical to the transformation performed by [pyxform](https://github.com/xlsform/pyxform), as illustrated below.
 
