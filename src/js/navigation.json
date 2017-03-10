@@ -6,6 +6,7 @@
             "Features": "#{enketo-main}/about/#enketo-features",
             "Ecosystem": "#{enketo-main}/about/#enketo-ecosystem",
             "History": "#{enketo-main}/about/#enketo-history",
+            "Roadmap": "#{enketo-main}/about/roadmap",
             "OpenRosa": "#{enketo-main}/openrosa",
             "Sponsors": "#{enketo-main}/about/sponsors",
             "Adoption": "#{enketo-main}/about/adoption",
