@@ -77,14 +77,15 @@ block main
           ### Form Building Tools
         
           Enketo currently recommends using either [XLSForm](sites['xlsform-spec']) or 
-          [the new KoBoForm](http://kobotoolbox.org) to construct forms. Another tool is 
+          [the new KoBoForm](http://kobotoolbox.org) to construct XForms. Another tool is 
           [ODK Build](http://build.opendatakit.org).
         
-          ODK build has the shortest learning curve. It is, however, not suitable for users that require complex or long forms, and a major disadvantage is that forms created with ODK Build cannot be deployed everywhere, e.g. not on KoBo and Ona.
-        
-          XLSForm is a bit harder to learn, but a key advantage is that after the initial learning curve, it becomes very easy to build and maintain forms. Another advantage is that forms created with XSLForms can be deployed anywhere in the OpenRosa ecosystem.
-        
+          XLSForm is a way to build forms in a spreadsheet. After an initial learning curve, it becomes very easy to build and maintain forms with this tool. A great advantage of this tool is that it makes it easy to share and discuss forms with others. 
+
           A new tool by KoBoToolbox, that continued the earlier excellent work of Alex Dorey, provides a Graphical User Interface for XLSForm. This easy-to-use tool was launched on [kobotoolbox.org](http://www.kobotoolbox.org) in 2014 and is starting to revolutionize form building in the OpenRosa ecosystem. In 2017, Ona launched a fork of KoBo's formbuilder.
+
+          ODK build is another easy-to-use tool. It is, however, not suitable for users that require complex or long forms. In 2017, ODK Build added the ability to export forms as XLSForms which means that you can now use this to to build forms to be deployed on KoBo Toolbox and Ona.
+          
       section#collection
         :md
           ### Data Collection
@@ -101,6 +102,7 @@ block main
           | Dedicated [Single Submission view](https://blog.enketo.org/single-submission-surveys/)| :check: | |
           | Easy installation + updates on user device | :check:        |               |
           | Barcode scanning                           |                | :check:       |
+          | Truly dynamic repeat count                 | :check:        |               |
           | Drawings and signature input               |                | :check:       |
           | [Likert scales](http://blog.enketo.org/likert-widget/) | :check: |          | 
           | [Distress input](http://blog.enketo.org/distress/) | :check: |              | 
