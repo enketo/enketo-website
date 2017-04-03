@@ -7,7 +7,7 @@ Install prerequisites with `npm install`. Build with `npm run build` and serve f
 
 ## Develop
 
-Start in development mode on [http://localhost:8080](http://localhost:8080) with `npm run develop`.
+Start in development mode on [http://localhost:8080](http://localhost:8080) with `npm run develop` (first run `npm run build` once).
 
 Try to use markdown where you can, to make it more enjoyable to add and edit text (use :md filter). 
 
