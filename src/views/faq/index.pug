@@ -58,15 +58,28 @@ block main
         :md
           All popular modern browsers are supported and recommended on all platforms except on iOS. They are: Chrome, Firefox, and Edge. 
           
-          In addition, a couple of non-modern (and rather terrible) browsers are supported that lag years behind the competition. They are: Safari and Internet Explorer 11.
+          In addition, a couple of sad non-modern browsers are supported that lag years behind the competition. They are: Safari and Internet Explorer 11.
 
-          On iOS, modern browsers are sadly not allowed by Apple. For example, Chrome on iOS is just the Apple-provided browser engine with a few missing features and a Chrome _skin_. It is not the _real_ Chrome. Therefore, on iOS only, we have no choice but to recommend Safari as it is the least bad iOS browser available.
+          On iOS, modern browsers are sadly not allowed by Apple. For example, Chrome on iOS is just the Apple-provided browser engine with a few missing features and a Chrome _skin_. It is not the _real_ Chrome. Therefore, on iOS only, we have no choice but to recommend Safari as it is the _least bad_ iOS browser available.
       details.use.dev#name
         summary What does "Enketo" mean and how is it pronounced?
         :md
           Enketo means "survey" in [Esperanto](https://en.wikipedia.org/wiki/Esperanto). 
 
           We are not sure how to properly pronounce it in Esperanto but you could say [\in-ˈke-tō]. The first "e" and second "e" should be pronounced the same because each letter has only one pronounciation in Esperanto. (How cool is that!)
+      details.use.dev#communicate
+        summary How do Aggregate/KoBo/Ona/Etc communicate with Enketo Express?
+        p 
+          Generally Enketo Express is installed on its own server and a typically communication takes place as follows between the OpenRosa server (KoBo/Aggregate/Ona) and Enketo:
+        ol
+          li The users clicks the Enketo/Webform button in the interface of the OpenRosa Server.
+          li The OpenRosa server makes an 
+            a(href=interpolate(sites['enketo-api'])) API call 
+            | to Enketo to obtain a webform URL.
+          li The user is redirected to the webform URL.
+          li Enketo retrieves the XForm from the OpenRosa server and displays it to the user.
+          li The user collects data and clicks Submit.
+          li The data is sent to the OpenRosa server.
       details.use.dev#sustain
         summary How is this project funded and sustained?
         :md
