@@ -69,18 +69,16 @@ block main
           We are not sure how to properly pronounce it in Esperanto but you could say [\in-ˈke-tō]. The first "e" and second "e" should be pronounced the same because each letter has only one pronounciation in Esperanto. (How cool is that!)
       details#communicate
         summary How do Aggregate/KoBo/Ona/Etc communicate with Enketo Express?
-        p Generally Enketo Express is installed on its own server and a typically communication takes place as follows between the OpenRosa server (KoBo/Aggregate/Ona) and Enketo using 
-          a(href=interpolate(primary.Develop.APIs)) various APIs
-          | :
-        ol
-          li The users clicks the Enketo/Webform button in the interface of the OpenRosa Server.
-          li The OpenRosa server makes an 
-            a(href=interpolate(sites['enketo-api'])) API call 
-            | to Enketo to obtain a webform URL.
-          li The user is redirected to the webform URL.
-          li Enketo retrieves the XForm from the OpenRosa server and displays it to the user.
-          li The user collects data and clicks Submit.
-          li The data is sent to the OpenRosa server.
+        :md
+
+          Generally Enketo Express is installed on its own server and a typical communication takes place as follows between the OpenRosa server (KoBo/Aggregate/Ona) and Enketo using [various APIs](primary.Develop.APIs):
+        
+          * The users clicks the Enketo/Webform button in the interface of the OpenRosa Server.
+          * The OpenRosa server makes an [API call](sites['enketo-api']) to Enketo to obtain a webform URL.
+          * The user is redirected to the webform URL.
+          * Enketo retrieves the XForm from the OpenRosa server and displays it to the user.
+          * The user collects data and clicks Submit.
+          * The data is sent to the OpenRosa server.
       details#sustain
         summary How is this project funded and sustained?
         :md
@@ -121,26 +119,26 @@ block main
           many of its features. 
       details#odk-relation
         summary What is the relationship between Enketo and Open Data Kit (ODK)?
-        p. 
-          Enketo and ODK are following the same XForms format and APIs. This means Enketo Express (and some other Enketo-powered apps) 
+        :md
+
+          Enketo and [ODK](https://opendatakit.org) are following the same XForms format and APIs. This means Enketo Express (and some other Enketo-powered apps) 
           can be used in conjunction with ODK Aggregate. They should be seen as an alternative for ODK Collect. 
           The codebases of Enketo Express and ODK Collect are completely separate and both are 100% unique implementations of 
           the same specifications. 
-        p 
-          | Within the ODK Developer Community, Enketo has taken on the role of documenting and guarding the XForms specification. 
-          | The specification is published at 
-          a(href=sites['enketo-xform-spec'])= sites['enketo-xform-spec']
-          | . In addition Enketo is actively involved in proposing and discussing additions and changes to the specifications in the ODK Developers' fora.
+      
+          Within the ODK Developer Community, Enketo has taken on a responsibility for documenting the XForms specification. 
+          The specification is published [here](sites['enketo-xform-spec']).
+          In addition Enketo is actively involved in proposing and discussing additions and changes to the specifications in the ODK Developers' fora.
       details#kobo-relation
         summary What is the relationship between Enketo and KoBoToolbox?
         :md
           Enketo Express is an integral part of [kobotoolbox.org](http://kobotoolbox.org) and KoBoToolbox has historically sponsored a 
-          large chunk of Enketo Express' development. It still provides code, emotional support, and funding for bug fixes.
+          large chunk of Enketo Express' development. It still provides code, feedback, emotional support, and significant funding for features and bug fixes.
       details#ona-relation
         summary What is the relationship between Enketo and Ona?
         :md
-          Enketo Express is an integral part of [ona.io](https://ona.io). Ona has historically played a major role in Enketo's 
-          development and design. Ona still contributes code, sponsorship, emotional support, and translations to Enketo.
+          Enketo Express is an integral part of [ona.io](https://ona.io). The founders of Ona have historically played a huge role in Enketo's 
+          development and design when we working together at the [same lab at Columbia University](http://qsel.columbia.edu/). Ona still contributes code, feedback, sponsorship, emotional support, and translations to the Enketo project.
       details#translation
         summary Can I help translate Enketo Express?
         :md
