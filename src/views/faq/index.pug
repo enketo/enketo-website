@@ -112,11 +112,21 @@ block main
           Very few people directly build forms in this format though. The most popular, and recommended, way to create the supported XForms is to create them as [XLSForms](primary.Use.XLSForm) and then convert them to XForms. 
           Many information management systems will do this conversion for you, behind-the-scenes, and therefore appear to support XLSForms directly.
           
+      details#data-ownership
+        summary Who owns the data collected with Enketo Express?
+        :md
+          Enketo Express does not store your data on its server. It not an all-in-one information management system as it needs to be linked with a form/data server (such as your own installation of ODK Aggregate) that will take care of that. Therefore, the question about data ownership is likely more applicable to the provider of data/form server you are using. 
+
+          Enketo's offline-capable webform views store data in the user's own browser. When data is submitted to your data server it is routed via the Enketo Express server, which functions as a _proxy_ to avoid cross-domain issues. Depending on the configuration of Enketo Express, some _metadata_ about the submission is logged though. See the Enketo Express [source code](sites['enketo-code']) for the current metadata that may be logged as it may change depending on troubleshooting needs.
+
+          For more information about Enketo's offline technologies see this [technical faq](./#offline-tech).
+
       details#openclinica-relation
         summary What is the relationship between OpenClinica and Enketo?
         :md
           OpenClinica is using Enketo throughout its platform. It is the major sponsor of Enketo and directly responsible for 
           many of its features. 
+
       details#odk-relation
         summary What is the relationship between Enketo and Open Data Kit (ODK)?
         :md
