@@ -4,6 +4,10 @@
     "description": "Enketo Project Website",
     "author": "Martijn van de Rijdt <martijn@enketo.org> (https://enketo.org)",
     "homepage": "https://enketo.org",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/enketo/enketo-website"
+    },
     "bugs": "https://github.com/enketo/enketo-website/issues",
     "ua": "UA-6765789-10",
     "scripts": {
