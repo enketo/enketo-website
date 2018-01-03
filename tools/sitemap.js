@@ -39,6 +39,4 @@ const content = `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map( toSitemapUrl ).join( '' )}
 </urlset>`;
 
-fs.writeFile( sitemapPath, content, {}, function() {
-    console.log( 'done' );
-} );
+fs.writeFile( sitemapPath, content, {}, () => console.log( 'done' ) );

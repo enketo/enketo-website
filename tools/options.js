@@ -47,14 +47,14 @@ renderer.tablecell = ( content, flags ) => {
 
 module.exports = {
     filters: {
-        md: ( text, options ) => marked( text, { renderer: renderer } ),
-        samplify: ( text, options ) => {
+        md: ( text ) => marked( text, { renderer: renderer } ),
+        samplify: ( text ) => {
             let result = '';
             const arr = JSON.parse( text );
             const l = arr.length;
 
             // prepend beforeLast and last, append first and second
-            [ arr[ l - 2 ], arr[ l - 1 ] ].concat( arr ).concat( [ arr[ 0 ], arr[ 1 ] ] ).forEach( function( item, index ) {
+            [ arr[ l - 2 ], arr[ l - 1 ] ].concat( arr ).concat( [ arr[ 0 ], arr[ 1 ] ] ).forEach( item => {
                 const srcLink = item.src ? `<p><a href="${item.src}">source</a></p>` : '';
                 result +=
                     `<li class="samples__list__item">
