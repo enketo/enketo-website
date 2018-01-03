@@ -6,19 +6,14 @@ const fs = require( 'fs' );
 const path = require( 'path' );
 const sitemapPath = path.join( process.cwd(), '/public/sitemap.xml' );
 
-let content;
-let extractUrls;
-let add;
-let getUrl;
-let toSitemapUrl;
-let inDomain;
-let urls;
+const getUrl = ( url ) => interpolate( url );
 
-extractUrls = ( obj, urls ) => {
-    let key;
-    // TODO: in ES6 default can be defined above
-    urls = ( typeof urls !== 'undefined' ) ? urls : [];
-    for ( key in obj ) {
+const inDomain = ( url ) => url.indexOf( navigation.sites[ 'enketo-main' ].substring( 8 ) ) !== -1;
+
+const add = ( item, arr ) => arr.indexOf( item ) === -1 && inDomain( item ) ? arr.push( item ) : arr;
+
+const extractUrls = ( obj, urls = [] ) => {
+    for ( let key in obj ) {
         if ( typeof obj[ key ] === 'string' ) {
             add( getUrl( obj[ key ] ), urls );
         } else if ( typeof obj[ key ] === 'object' ) {
@@ -30,22 +25,16 @@ extractUrls = ( obj, urls ) => {
     }
 
     return urls;
-}
+};
 
-add = ( item, arr ) => arr.indexOf( item ) === -1 && inDomain( item ) ? arr.push( item ) : arr;
-
-getUrl = ( url ) => interpolate( url );
-
-inDomain = ( url ) => url.indexOf( navigation.sites[ 'enketo-main' ].substring( 8 ) ) !== -1;
-
-toSitemapUrl = ( url ) => `
+const toSitemapUrl = ( url ) => `
     <url>
         <loc>${url}</loc>
     </url>`;
 
-urls = extractUrls( navigation.primary ).concat( [ navigation.sites[ 'enketo-api' ] ] );
+const urls = extractUrls( navigation.primary ).concat( [ navigation.sites[ 'enketo-api' ] ] );
 
-content = `<?xml version="1.0" encoding="UTF-8"?>
+const content = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\
 ${urls.map( toSitemapUrl ).join( '' )}
 </urlset>`;
