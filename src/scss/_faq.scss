@@ -1,9 +1,7 @@
 .faq {
     details {
         margin: 10px 0;
-        padding: 0;
-
-        // large-as-possible clickable area
+        padding: 0; // large-as-possible clickable area
         border: 1px solid $gray-lighter;
 
         &:nth-child(even) {
@@ -23,12 +21,11 @@
 
     summary {
         font-weight: bold;
-        padding: 15px;
+        padding: 15px !important; // "!important" is added for IE/Edge to override the rule for .no-details details > summary
         cursor: pointer;
         outline: 0;
-
-        // to keep the clickable are of summary as large as possible, remove top margin of first p
-        & + p {
+        &+p {
+            // to keep the clickable are of summary as large as possible, remove top margin of first p
             margin-top: 5px;
         }
 
@@ -52,7 +49,7 @@
             display: inline-block;
         }
 
-        ul + ul {
+        ul+ul {
             margin-left: 30px;
         }
     }

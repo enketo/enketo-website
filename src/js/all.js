@@ -27,6 +27,8 @@ const goToDetail = ( hash = null ) => {
     const detailEl = document.querySelector( 'details' + hash );
     if ( detailEl ) {
         detailEl.open = true;
+        // for IE and Edge only:
+        detailEl.setAttribute( 'open', 'open' );
     }
 };
 
