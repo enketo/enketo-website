@@ -1,6 +1,10 @@
 Enketo Website
 ================
 
+## Prerequisites
+
+NodeJS 6+
+
 ## Build
 
 Install prerequisites with `npm install`. Build with `npm run build` and serve from /public.

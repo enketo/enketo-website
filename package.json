@@ -1,6 +1,6 @@
 {
     "name": "enketo-website",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Enketo Project Website",
     "author": "Martijn van de Rijdt <martijn@enketo.org> (https://enketo.org)",
     "homepage": "https://enketo.org",
@@ -13,11 +13,11 @@
     "scripts": {
         "start": "http-server public",
         "test": "eslint src/js/all.js && npm run build",
-        "prepublish": "npm run build",
+        "install": "npm run build",
         "clean": "if [ -d \"public\" ]; then rm -R public ; fi; mkdir public; mkdir public/js",
         "copy": "cp -R src/media public/media && cp -f src/js/navigation.json public/js/ && cp -f _* public",
         "sitemap": "node ./tools/sitemap.js",
-        "js": "browserify src/js/all.js -o public/js/all.js -t babelify",
+        "js": "browserify src/js/all.js -t babelify -o public/js/all.js",
         "uglifyjs": "uglifyjs public/js/all.js -o public/js/all.min.js -m -c",
         "pug": "pug -O tools/options.js src/views -o public",
         "pug-w": "pug -O tools/options.js src/views -o public -w",
@@ -29,21 +29,22 @@
     },
     "license": "Apache-2.0",
     "devDependencies": {
-        "babel-preset-es2015": "6.9.x",
-        "babelify": "7.3.xs",
-        "browserify": "13.1.x",
-        "eslint": "^2.9.0",
-        "highlight.js": "9.9.x",
-        "http-server": "0.9.x",
-        "livereload": "0.5.x",
-        "marked": "0.3.x",
-        "node-sass": "4.1.x",
-        "pug": "2.0.0-beta6",
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babelify": "^8.0.0",
+        "browserify": "^14.5.0",
+        "eslint": "4.14.0",
+        "highlight.js": "9.12.x",
+        "http-server": "0.10.x",
+        "livereload": "0.6.x",
+        "marked": "0.3.9",
+        "node-sass": "4.7.x",
+        "pug": "2.0.0-rc.4",
         "pug-cli": "1.0.0-alpha6",
-        "uglify-js": "2.7.x"
+        "uglify-js": "3.3.x"
     },
     "dependencies": {
-        "babel-polyfill": "6.16.x",
+        "babel-polyfill": "^6.26.0",
         "details-polyfill-es6": "1.0.x"
     }
 }
