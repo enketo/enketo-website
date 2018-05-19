@@ -6,8 +6,7 @@ $line-height-computed: floor($font-size-base * $line-height-base);
 $brand-primary-color: #F15A29;
 
 //$brand-secondary-color: lighten($brand-primary-color, 50%);
-
-$orange-text: $brand-primary-color;
+$orange-text: darken($brand-primary-color, 13%);
 
 // rgb(237, 87, 50);
 $orange-bg: rgb(242, 126, 97);

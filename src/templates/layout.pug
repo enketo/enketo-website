@@ -1,28 +1,30 @@
 include ./mixins
 include ./mixins-img
+block vars
 doctype html
 html(lang='en')
   head
     link(rel="preconnect", href="https://fonts.gstatic.com/", crossorigin)
     block title
       title Enketo
+    - var crr = 'tests';
     meta(charset='utf-8')
     meta(name='author', content='Martijn van de Rijdt (Enketo LLC)')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='Description', content=`project: Enketo Open-Source Project, ecosystem: ODK OpenDataKit Open Data Kit${current ? ', page: '+current+' Enketo' : ''}`)
     link(rel='shortcut icon', href='/media/images/logos/enketo.ico')
     link(rel='stylesheet', href='/css/all.css', type='text/css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:400,700')
     block css
   body
-    block vars
     include ./header
     include ./search
-    .attract(role="img")
+    .attract(role='banner')
       block attract
     nav.secondary-nav
       .content-ui
         block nav
-    div.main(role="main")
+    div.main(role='main')
       block main
     include ./footer
     //script(src='http://localhost:35729/livereload.js?snipver=1')

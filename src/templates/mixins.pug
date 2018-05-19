@@ -37,7 +37,7 @@ mixin samplify(samples)
       section.samples__list__item__main
         h5
           span=item.title
-          button.samples__list__item__info-btn.button-icon-only: i.icon.icon-info-circle
+          button.samples__list__item__info-btn.button-icon-only(type='button', aria-label='more info'): i.icon.icon-info-circle
         a(href=item.live)        
           +img(item.img, 'screenshot of form')
       aside.samples__list__item__details
