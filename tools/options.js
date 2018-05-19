@@ -5,7 +5,9 @@ const interpolate = require( './interpolate' );
 const hljs = require( 'highlight.js' );
 const marked = require( 'marked' );
 const pkg = require( '../package' );
+const pug = require( 'pug' );
 const renderer = new marked.Renderer();
+const mime = require( 'mime-types' );
 
 // Replace icon references
 const replaceIcons = ( text ) => text.replace( ':check:', '<span class="icon icon-check"></span>' ).replace( ':question:', '<span class="icon icon-question"></span>' );
@@ -45,37 +47,21 @@ renderer.tablecell = ( content, flags ) => {
     return `<${type}>${replaceIcons(content)}</${type}>\n`;
 };
 
+// call pug img() mixin
+renderer.image = ( href, title, text ) => {
+    const pugTxt = `include src/templates/mixins-img
++img('${href}','${text}')`;
+    return pug.render( pugTxt, { filename: 'mixins-img.pug', mime } );
+};
+
 module.exports = {
     filters: {
-        md: ( text ) => marked( text, { renderer: renderer } ),
-        samplify: ( text ) => {
-            let result = '';
-            const arr = JSON.parse( text );
-            const l = arr.length;
-
-            // prepend beforeLast and last, append first and second
-            [ arr[ l - 2 ], arr[ l - 1 ] ].concat( arr ).concat( [ arr[ 0 ], arr[ 1 ] ] ).forEach( item => {
-                const srcLink = item.src ? `<p><a href="${item.src}">source</a></p>` : '';
-                result +=
-                    `<li class="samples__list__item">
-                        <section class="samples__list__item__main">
-                            <h5><span>${item.title}</span><button class="samples__list__item__info-btn button-icon-only"><i class="icon icon-info-circle"></i></button></h5>
-                            <a href="${item.live}" style="background-image: url(${item.img});"></a>
-                        </section>
-                        <aside class="samples__list__item__details">
-                            <p>${item.desc}</p>
-                            <p>Author: ${item.auth}</p>
-                            ${srcLink}
-                        </aside>
-                    </li>`;
-            } );
-
-            return result;
-        }
+        md: text => marked( text, { renderer: renderer } ),
     },
     pretty: true,
     primary: navigation.primary,
     sites: navigation.sites,
-    interpolate: interpolate,
-    UA: pkg.ua
+    interpolate,
+    UA: pkg.ua,
+    mime,
 };

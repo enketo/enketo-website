@@ -2,8 +2,8 @@
   button.button-icon-only.samples__scroll-btn.left-scroll(type='button'): i.icon.icon-chevron-left
   .samples__list-wrapper
     ul.samples__list
-      :samplify
-        [ 
+      - 
+        var samples = [ 
           {
             "title":"Widgets",
             "img": "/media/images/screenshots/widgets.png",
@@ -61,4 +61,5 @@
             "src": "https://docs.google.com/spreadsheet/ccc?key=0Al3Mw5sknZoPdDhSVmhJX2NvOG44X1RadTA2RVRzSHc&usp=sharing"
           }
         ]
+      +samplify(samples)
   button.button-icon-only.samples__scroll-btn.right-scroll(type='button'): i.icon.icon-chevron-right

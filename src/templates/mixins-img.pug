@@ -1,0 +1,10 @@
+mixin img(src, alt)
+  picture
+    - const RE = /\.(png|jpg)$/i;
+    - const converted = RE.test(src);
+    - const srcWebp = src.replace(RE, '.webp');
+    - const type = mime.lookup(src);
+    if converted
+      source(srcset=srcWebp, type="image/webp")
+    source(srcset=src, type=type)
+    img(src=src, alt=alt)

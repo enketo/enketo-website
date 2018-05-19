@@ -1,8 +1,8 @@
 - 
   sites['enketo-main'] = '';
 
-  var getActives = function(obj, name){
-    var actives = [name];
+  const getActives = function(obj, name){
+    const actives = [name];
     for( var key in obj) {
       if (typeof obj[key] === 'object' && obj[key][name]) {
         if (actives.indexOf(key) === -1){
@@ -22,7 +22,27 @@ mixin menu(obj)
 
   ul 
     each val, key in obj
-      - var link = typeof val === 'object' ? val._self : (key !== '_self' ? val : null);     
+      - const link = typeof val === 'object' ? val._self : (key !== '_self' ? val : null);     
       if link
         li(class=(actives.indexOf(key) !== -1 ? 'active' : ''))
           a(href=interpolate(link))= key
+
+mixin samplify(samples)
+  - const l = samples.length;
+  // prepend beforeLast and last, append first and second
+  - const arr = [ samples[ l - 2 ], samples[ l - 1 ] ].concat( samples ).concat( [ samples[ 0 ], samples[ 1 ] ] )
+
+  each item in arr
+    li.samples__list__item
+      section.samples__list__item__main
+        h5
+          span=item.title
+          button.samples__list__item__info-btn.button-icon-only: i.icon.icon-info-circle
+        a(href=item.live)        
+          +img(item.img, 'screenshot of form')
+      aside.samples__list__item__details
+        p=item.desc
+        p=`Author: ${item.auth}`
+        if item.src
+          p: a(href=item.src) source
+        

@@ -1,11 +1,17 @@
-#features, #samples, #tools, #use, #about {
+#features,
+#samples,
+#tools,
+#use,
+#about {
     h3 {
         margin-top: 12px;
         margin-bottom: 40px;
     }
 }
 
-#samples, #tools, #use {
+#samples,
+#tools,
+#use {
     .content {
         border-bottom: 1px solid $gray-light;
     }
@@ -130,19 +136,19 @@
         width: 60%;
     }
 
-    .offline {
+    .offline img {
         padding-top: 5%;
     }
 
-    .smart {
+    .smart img {
         padding-top: 20%;
     }
 
-    .fast {
+    .fast img {
         padding-top: 23%;
     }
 
-    .print-friendly {
+    .print-friendly img {
         padding-top: 24%;
     }
 }
@@ -190,15 +196,15 @@
             width: auto;
         }
 
-        .offline {
+        .offline img {
             padding-top: 5%;
         }
 
-        .smart {
+        .smart img {
             padding-top: 2%;
         }
 
-        .print-friendly {
+        .print-friendly img {
             padding-top: 2%;
         }
 
