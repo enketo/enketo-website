@@ -5,7 +5,7 @@ doctype html
 html(lang='en')
   head
     include ./tracking
-    link(rel="preconnect", href="https://fonts.gstatic.com/", crossorigin)
+    link(rel="preconnect", href="https://fonts.googleapis.com/", crossorigin)
     block title
       title Enketo
     - var crr = 'tests';
@@ -13,9 +13,29 @@ html(lang='en')
     meta(name='author', content='Martijn van de Rijdt (Enketo LLC)')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='Description', content=`project: Enketo Open-Source Project, ecosystem: ODK OpenDataKit Open Data Kit${current ? ', page: '+current+' Enketo' : ''}`)
+    
+    //- Load styles inline to increase loading speed
+    style
+      include:scss ../scss/all.scss
+
     link(rel='shortcut icon', href='/media/images/logos/enketo.ico')
-    link(rel='stylesheet', href='/css/all.css', type='text/css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:400,700')
+    link(rel='preload', as='font', href='/media/fonts/fontawesome-webfont.woff', type='font/woff', crossorigin)
+    link(rel='stylesheet', href='/media/fonts/fontawesome-webfont.woff', media='all')
+
+    //- Load Font asynchronously to not block loading
+    script(type="text/javascript").
+      WebFontConfig = {
+          google: { families: [ 'Open+Sans:400,700:latin' ] }
+      };
+      (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+      })();
+   
     block css
   body
     include ./header
@@ -28,5 +48,5 @@ html(lang='en')
     div.main(role='main')
       block main
     include ./footer
-    //script(src='http://localhost:35729/livereload.js?snipver=1')
+    //- script(src='http://localhost:35729/livereload.js?snipver=1')
     script(async, src='/js/all.min.js')

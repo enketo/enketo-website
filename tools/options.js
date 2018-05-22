@@ -4,6 +4,7 @@ const navigation = require( '../src/js/navigation' );
 const interpolate = require( './interpolate' );
 const hljs = require( 'highlight.js' );
 const marked = require( 'marked' );
+const sass = require( 'node-sass' );
 const pkg = require( '../package' );
 const pug = require( 'pug' );
 const renderer = new marked.Renderer();
@@ -57,8 +58,9 @@ renderer.image = ( href, title, text ) => {
 module.exports = {
     filters: {
         md: text => marked( text, { renderer: renderer } ),
+        scss: text => sass.renderSync( { data: text, outputStyle: 'compact', includePaths: [ 'src/scss' ] } ).css.toString(),
     },
-    pretty: true,
+    pretty: false,
     primary: navigation.primary,
     sites: navigation.sites,
     interpolate,

@@ -12,7 +12,8 @@ body {
     min-height: 50px;
 }
 
-.header, .secondary-nav {
+.header,
+.secondary-nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -44,7 +45,6 @@ body {
 // content of main section
 .content {
     @include clearfix;
-
     margin: 0 auto;
     width: 100%;
     max-width: $max-width;
