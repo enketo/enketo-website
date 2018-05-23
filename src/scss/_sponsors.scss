@@ -29,5 +29,8 @@
         max-height: 55px;
         width: 300px;
         max-width: 100%;
+        &[src$='onadata.png'] {
+            max-height: 40px;
+        }
     }
 }

@@ -16,6 +16,9 @@
         img {
             max-width: 240px;
             max-height: 60px;
+            &[src$='onadata.png'] {
+                max-height: 45px;
+            }
         }
     }
 }
