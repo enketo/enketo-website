@@ -15,7 +15,7 @@
         "test": "eslint src/js/all.js && npm run build",
         "install": "npm run build",
         "clean": "if [ -d \"public\" ]; then rm -R public ; fi; mkdir public; mkdir public/js",
-        "copy": "cp -R src/media public/media && cp -f src/js/navigation.json public/js/ && cp -f _* public",
+        "copy": "cp -R src/media public/media && cp -f src/js/navigation.json public/js/ && cp -f _* public && cp -f manifest.json public/",
         "convert": "node ./tools/images.js",
         "sitemap": "node ./tools/sitemap.js",
         "js": "browserify src/js/all.js -t babelify -o public/js/all.js",
