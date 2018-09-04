@@ -8,15 +8,17 @@ html(lang='en', prefix="og: http://ogp.me/ns#")
     
     block title
       title Enketo
-    - var crr = 'tests';
+    - var desc = `Enketo Open-Source Project for the Open Data Kit ecosystem${current ? ': '+current+' Enketo' : ''}.`;
+
     meta(charset='utf-8')
     meta(name='author', content='Martijn van de Rijdt (Enketo LLC)')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='Description', content=`project: Enketo Open-Source Project, ecosystem: ODK OpenDataKit Open Data Kit${current ? ', page: '+current+' Enketo' : ''}`)
+    meta(name='Description', content=desc)
     meta(property='og:title', content='Enketo')
     meta(property='og:type', content='website')
     meta(property='og:url', content='https://enketo.org')
-    meta(property='og:image', content='https://enketo.org/media/images/logos/enketo_bare_150x56.png')
+    meta(property='og:image', content='https://enketo.org/media/images/logos/enketo_bare_high.png')
+    meta(property='og:description', content=desc)
 
     //- Load styles inline to increase loading speed
     style
