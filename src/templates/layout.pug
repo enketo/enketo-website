@@ -2,7 +2,7 @@ include ./mixins
 include ./mixins-img
 block vars
 doctype html
-html(lang='en')
+html(lang='en', prefix="og: http://ogp.me/ns#")
   head
     include ./tracking
     
@@ -13,7 +13,11 @@ html(lang='en')
     meta(name='author', content='Martijn van de Rijdt (Enketo LLC)')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='Description', content=`project: Enketo Open-Source Project, ecosystem: ODK OpenDataKit Open Data Kit${current ? ', page: '+current+' Enketo' : ''}`)
-    
+    meta(property='og:title', content='Enketo')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='https://enketo.org')
+    meta(property='og:image', content='https://enketo.org/media/images/logos/enketo_bare_150x56.png')
+
     //- Load styles inline to increase loading speed
     style
       include:scss ../scss/all.scss
