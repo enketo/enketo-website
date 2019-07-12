@@ -18,21 +18,18 @@
         "copy": "cp -R src/media public/media && cp -f src/js/navigation.json public/js/ && cp -f _* public && cp -f manifest.json public/",
         "convert": "node ./tools/images.js",
         "sitemap": "node ./tools/sitemap.js",
-        "js": "browserify src/js/all.js -t babelify -o public/js/all.js",
-        "uglifyjs": "uglifyjs public/js/all.js -o public/js/all.min.js -m -c",
+        "js": "browserify src/js/all.js -o public/js/all.js",
+        "terser": "terser public/js/all.js -o public/js/all.min.js -m -c",
         "pug": "pug -O tools/options.js src/views -o public",
         "pug-w": "pug -O tools/options.js src/views -o public -w",
         "css": "node-sass src/scss -o public/css",
         "css-w": "node-sass src/scss -o public/css -w",
         "livereload": "livereload \"public/css/**/*.css, public/**/*.html\" -d -w 1000",
-        "build": "npm run clean && npm run copy && npm run convert && npm run sitemap && npm run js && npm run pug && npm run css && npm run uglifyjs",
+        "build": "npm run clean && npm run copy && npm run convert && npm run sitemap && npm run js && npm run pug && npm run css && npm run terser",
         "develop": "npm run js & npm run pug-w & npm run css-w & npm run livereload & http-server public"
     },
     "license": "Apache-2.0",
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-preset-env": "^1.7.0",
-        "babelify": "^8.0.0",
         "browserify": "^16.2.2",
         "eslint": "^5.0.0-alpha.3",
         "highlight.js": "9.12.x",
@@ -45,10 +42,6 @@
         "node-sass": "^4.9.0",
         "pug": "^2.0.3",
         "pug-cli": "1.0.0-alpha6",
-        "uglify-js": "^3.3.25"
-    },
-    "dependencies": {
-        "babel-polyfill": "^6.26.0",
-        "details-polyfill-es6": "1.0.x"
+        "terser": "^4.1.2"
     }
 }

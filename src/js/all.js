@@ -1,8 +1,3 @@
-'use strict';
-
-import 'babel-polyfill';
-import 'details-polyfill-es6';
-
 /**
  * Adds listeners to a NodeList.
  * 
