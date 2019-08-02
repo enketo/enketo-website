@@ -1,4 +1,4 @@
-Enketo Website
+Enketo Website [![Netlify Status](https://api.netlify.com/api/v1/badges/1e5fe7c0-57af-459c-8edb-752f4a1829f7/deploy-status)](https://app.netlify.com/sites/sheep-shearer-electrodes-37175/deploys)
 ================
 
 ## Prerequisites
