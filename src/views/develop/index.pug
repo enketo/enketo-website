@@ -20,36 +20,42 @@ block main
           | The illustration below shows how these 4 libraries are used as building blocks of one such application: Enketo Express.
 
         .dev-overview
-          h4 Enketo Express
+          h4: a(href="https://github.com/enketo/enketo-express") Enketo Express
           ul 
              li communication with OpenRosa server
              li persistent storage in browser
              li applicationCache in browser
           .dev-overview__2nd
             .dev-overview__2nd__side client
-            h4 Enketo Core
+            h4: a(href="https://github.com/enketo/enketo-core") Enketo Core
             ul 
               li form rendering
               li form logic
               li form API
             .dev-overview__3rd
-              h4 Enketo XPathJS
+              h4: a(href="https://github.com/enketo/enketo-xpathjs") Enketo XPathJS
               ul 
                 li XPath evaluation
           .dev-overview__2nd
             .dev-overview__2nd__side server
-            h4 Enketo Transformer
+            h4: a(href="https://github.com/enketo/enketo-transformer") Enketo Transformer
             ul 
               li XSL transformation of XForm
               li markdown processsing
               li language directionality
               li media/data resource URI resolution
             .dev-overview__3rd
-              h4 Enketo XSLT
+              h4: a(href="https://github.com/enketo/enketo-xslt") Enketo XSLT
               ul
                 li XSL stylesheets
 
         p These libraries are divided in a logical way so they can be used for light-weight mobile hybrid applications, as well as web applications. There is a lot of flexibility in using these libraries. For example you could use Enketo XSLT in your own transformer in the programming language of your choice. 
+
+        p Enketo is also maintaining an 
+          a(href="https://github.com/enketo/enketo-validate") XForm validator
+          |. This be seen in action side-by-side with ODK Validate at 
+          a(href="https://validate.enketo.org") validate.enketo.org
+          |.
 
       section#transformation
         h3 Transformation

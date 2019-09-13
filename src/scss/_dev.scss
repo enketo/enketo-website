@@ -8,7 +8,7 @@
 }
 
 .dev-overview {
-    $border: 2px solid $brand-primary-color;
+    $border: 2px solid black;
     $padding: 10px;
 
     display: flex;
@@ -20,7 +20,8 @@
     background: $gray-lighter;
     font-size: 14px;
 
-    h4, ul {
+    h4,
+    ul {
         width: 100%;
     }
 
