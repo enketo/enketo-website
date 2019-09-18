@@ -5,6 +5,10 @@
     @extend .fa;
 }
 
+.fa-arrow-right:before {
+    content: $fa-var-arrow-right;
+}
+
 .fa-github:before {
     content: $fa-var-github;
 }
