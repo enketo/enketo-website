@@ -36,7 +36,7 @@ block main
           The first time you load any Enketo Express survey, a copy of the app and survey are stored in the browser. An ![offline-enabled icon](/media/images/offline-enabled.png) 
           icon will be shown in the top left of your screen to confirm that it has 
           been stored. From that point onwards you 
-          can load that survey even when you do not have an Internet connection. 
+          can load that survey even when you do not have an Internet connection. When an application update is available the cache will automatically be updated when the user is online.
         
           You can safely shut down your computer and go to the field
           to collect data. Any data you collect will also be stored persistently in the browser. Enketo will check regularly to see if there
@@ -88,8 +88,7 @@ block main
       details#offline-tech
         summary What are the technologies used for offline capabilities of Enketo (Express)?
         :md
-          The app itself is cached in the browser using the Application Cache. In the future, when browser support becomes widespread, 
-          we plan to switch to Service Workers.
+          The app itself is cached in the browser using the [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). 
         
           The data, form, and form resources are stored in the browser using indexedDb.
       details#enketo-core-diff
