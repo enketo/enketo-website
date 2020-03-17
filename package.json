@@ -37,7 +37,7 @@
         "imagemin-keep-folder": "^5.3.2",
         "imagemin-webp": "^5.1.0",
         "livereload": "^0.9.1",
-        "marked": "^0.3.0",
+        "marked": "0.3.18",
         "mime-types": "^2.1.26",
         "node-sass": "^4.13.1",
         "pug": "^2.0.4",
