@@ -44,7 +44,7 @@
         "enketo-blog": "https://blog.enketo.org/",
         "enketo-api": "https://apidocs.enketo.org/v2/",
         "enketo-code": "https://github.com/enketo/",
-        "enketo-xform-spec": "https://opendatakit.github.io/xforms-spec/",
+        "enketo-xform-spec": "https://getodk.github.io/xforms-spec/",
         "xlsform-spec": "http://xlsform.org/",
         "enketo-user-forum": "https://groups.google.com/forum/#!forum/enketo-users",
         "enketo-developer-forum": "https://groups.google.com/forum/#!forum/enketo-dev"
