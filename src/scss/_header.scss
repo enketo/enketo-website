@@ -1,6 +1,18 @@
 .header {
     background: $gray-darker;
 
+    .content-ui{
+        position: relative;
+    }
+
+    &__banner {
+        width: 100%;
+        background: rgb(255, 253, 231);
+        text-align: center;
+        min-height: 30px;
+        padding: 7px;
+        font-weight: bold;
+    }
     &__branding {
         display: inline-block;
         margin: 7px 15px 7px 5px;
