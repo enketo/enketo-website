@@ -11,7 +11,10 @@ const renderer = new marked.Renderer();
 const mime = require( 'mime-types' );
 
 // Replace icon references
-const replaceIcons = ( text ) => text.replace( ':check:', '<span class="icon icon-check"></span>' ).replace( ':question:', '<span class="icon icon-question"></span>' );
+const replaceIcons = ( text ) => text
+    .replace( ':check:', '<span class="icon icon-check"></span>' )
+    .replace( ':question:', '<span class="icon icon-question"></span>' )
+    .replace( ':custom:', '<span class="custom">custom</span>');
 
 // Replace navigation.json references
 const lookupNavItem = ( keyStr ) => {

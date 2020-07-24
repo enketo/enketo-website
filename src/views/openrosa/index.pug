@@ -25,8 +25,9 @@ block main
           * require tools that follow a **non-proprietary** form format and communication protocols
           * require a system that they can **easily add components to or remove components from**
           * require forms that have **complex skip and validation logic**
-          * require tools that are **open-source**\*
+          * require tools that are **open-source**
           * require advanced data collection in places that do **not have internet access**
+
       section#components
         :md
           ### What are the components?
@@ -55,10 +56,10 @@ block main
           ### Form Management & Data Aggregation
         
           This is the core component of an OpenRosa information management system as it ties all other components together. The open-source options are 
-          [KoBo Toolbox](http://kobotoolbox.org), [Ona](https://ona.io), and
-          [ODK Aggregate](https://docs.getodk.org/aggregate-intro/)
+          [KoBo Toolbox](http://kobotoolbox.org), [ODK Central](https://docs.getodk.org/central-intro/), [Nemo](https://getnemo.org/), [Ona](https://ona.io), and
+          [ODK Aggregate](https://docs.getodk.org/aggregate-intro/) (now being replaced by ODK Central)
 
-          The requirements for choosing this crucial component will vary greatly from organization to organization, so we recommend having a look at all of them to determine which one fits best.
+          The requirements for choosing this crucial component will vary greatly from organization to organization, so we recommend having a look at all of them to determine which one fits best. It is also important to check the GitHub repos of these products to see how actively maintained they are.
         
       section#form-building
         :md
@@ -84,24 +85,15 @@ block main
         
           |                                            |  Enketo (web)  |  ODK Collect  |
           |--------------------------------------------|----------------|---------------|
-          | Web (any device)                           | :check:        |               |
-          | Android mobile app                         |                | :check:       |               
+          | Platform                                   | web            |      android  |              
           | Works offline                              | :check:        | :check:       |
           | Dedicated [Single Submission view](https://blog.enketo.org/single-submission-surveys/)| :check: | |
           | Edit already submitted data                | :check:        |               |
-          | Dedicated readonly views and form previews | :check:        |               |
-          | Easy installation + updates on user device | :check:        |               |
+          | Dedicated readonly, PDF, print and preview views  | :check: |               |
           | Barcode scanning                           |                | :check:       |
-          | Truly dynamic repeat count                 | :check:        |               |
-          | [Image Map widget](https://blog.enketo.org/image-map/)| :check:   |         |
+          | Truly dynamic repeat count                 | :check:        | :question:    |
           | Bearing widget                             |                | :check:       |
-          | Open Map Kit integration                   |                | :check:       |
-          | [Likert scales](https://blog.enketo.org/likert-widget/) | :check: |         | 
-          | [Distress input](https://blog.enketo.org/distress/) | :check: |             | 
-          | [Geoshape and geotrace inputs](https://blog.enketo.org/geo/) | :check: |    | 
-          | Analog scale inputs                        | :check:        |               |  
-          | Comment widget                             | :check:        |               | 
-          | Linking with [external mobile apps](https://docs.getodk.org/launch-apps-from-collect/)| | :check: |
+          | Start-geopoint hidden question             |                | :check:       |
           | Large text input                           | :check:        |               |
           | Additional paper + pencil collection workflow support | :check:|            |
           | Full-form-as-one-page mode                 | :check:        |               |  
@@ -110,7 +102,16 @@ block main
           | Embedding forms into any webpage           | :check:        |               | 
           | Retaining **submitted** data locally       |                | :check:       |
           | Setting default values dynamically via API | :check:        |               |
-          | Multiple [themes](https://blog.enketo.org/gorgeous-grid/) | :check: |        |
+          | Multiple [themes](https://blog.enketo.org/gorgeous-grid/) | :check: |       |
+          | Analog scale inputs :custom:               | :check:        |               |  
+          | Comment widget :custom:                    | :check:        |               | 
+          | Linking with [external mobile apps](https://docs.getodk.org/launch-apps-from-collect/) :custom: | | :check: |
+          | [Distress input](https://blog.enketo.org/distress/) :custom: | :check: |    | 
+          | XLSForm `select_external` support :custom: |                |               |
+          | appearance `search()` support :custom:     |                | :check:       |
+          | Printer widget :custom:                    |                | :check:       |
+
+          Features marked with <span class="custom">custom</span> are not part of the agreed common standards and are unlikely to ever be supported by both clients.
       section#analysis
         :md
           ### Data Analysis
@@ -118,8 +119,3 @@ block main
           Linked with Data Aggregation component. The options are too numerous to mention.
           
           Some tools have analysis built-in. Others focus on exporting data into formats that can easily be imported into tools of your choice.
-      section.footnotes
-        :md
-          ### Footnotes
-          
-          * \* not all OpenRosa-compliant tools are open-source but open-source options are available for all components of an OpenRosa-compliant system.
