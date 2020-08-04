@@ -16,8 +16,18 @@ block main
       section#libraries
         h3 Libraries
         p
-          | Enketo maintains 4 libraries that can be used to build an Enketo-powered application. 
-          | The illustration below shows how these 4 libraries are used as building blocks of one such application: Enketo Express.
+          | Enketo maintains 4 libraries (
+          a(href="https://github.com/enketo/enketo-core") Core
+          | , 
+          a(href="https://github.com/enketo/enketo-transformer") Transformer
+          | , 
+          a(href="https://github.com/enketo/enketo-xpathjs") XPathJS
+          | , 
+          a(href="https://github.com/enketo/enketo-validate") Validate
+          | ) that can be used to build an Enketo-powered application. 
+          | The illustration below shows how 3 of these libraries are used as building blocks of one such application: 
+          a(href="https://github.com/enketo/enketo-express") Enketo Express
+          | .
 
         .dev-overview
           h4: a(href="https://github.com/enketo/enketo-express") Enketo Express
@@ -47,16 +57,16 @@ block main
 
         p These libraries are divided in a logical way so they can be used for light-weight mobile hybrid applications, as well as web applications. They don't use opinionated JS frameworks either to provide further flexibility and sustainability.
 
-        p Enketo is also maintaining an 
-          a(href="https://github.com/enketo/enketo-validate") XForm validator
-          |. This be seen in action side-by-side with ODK Validate at 
+        p Enketo's 
+          a(href="https://github.com/enketo/enketo-validate") XForm validator 
+          | can be seen in action side-by-side with ODK Validate at 
           a(href="https://validate.enketo.org") validate.enketo.org
           |.
 
       section#transformation
         h3 Transformation
         p.
-          Enketo's form engine, Enketo Core, does not read XForms directly. It works with the result of a transformation of an 
+          Enketo's form engine (Enketo Core) does not read XForms directly. It works with the result of a transformation of an 
           XForm into a JSON object containing a form HTML string and a model XML string.
           The illustration below gives a high-level overview of this transformation.
 
