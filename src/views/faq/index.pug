@@ -68,10 +68,10 @@ block main
 
           We are not sure how to properly pronounce it in Esperanto but you could say [\in-ˈke-tō]. The first "e" and second "e" should be pronounced the same because each letter has only one pronounciation in Esperanto. (How cool is that!)
       details#communicate
-        summary How do Aggregate/KoBo/Ona/Etc communicate with Enketo Express?
+        summary How do ODK Central/KoBoToolbox/Ona/Etc communicate with Enketo Express?
         :md
 
-          Generally Enketo Express is installed on its own server and a typical communication takes place as follows between the OpenRosa server (KoBo/Aggregate/Ona) and Enketo using [various APIs](primary.Develop.APIs):
+          Generally Enketo Express is installed on its own server and a typical communication takes place as follows between the OpenRosa server (KoBoToolbox/Central/Ona) and Enketo using [various APIs](primary.Develop.APIs):
         
           * The users clicks the Enketo/Webform button in the interface of the OpenRosa Server.
           * The OpenRosa server makes an [API call](sites['enketo-api']) to Enketo to obtain a webform URL.
@@ -146,7 +146,7 @@ block main
         :md
 
           Enketo and [ODK](https://getodk.org) are following the same XForms format and APIs. This means Enketo Express (and some other Enketo-powered apps) 
-          can be used in conjunction with ODK Aggregate, ODK Briefcase, and ODK Build. They should be seen as an alternative for ODK Collect. 
+          can be used in conjunction with ODK Central, ODK Briefcase, and ODK Build. They should be seen as an alternative for ODK Collect. 
           The codebases of Enketo Express and ODK Collect are completely separate and both are 100% unique implementations of 
           the same specifications. 
       
