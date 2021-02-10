@@ -32,7 +32,7 @@
     "devDependencies": {
         "browserify": "^16.5.2",
         "eslint": "^5.16.0",
-        "highlight.js": "9.12.x",
+        "highlight.js": "10.4.x",
         "http-server": "^0.12.3",
         "imagemin-keep-folder": "^5.3.2",
         "imagemin-webp": "^5.1.0",
