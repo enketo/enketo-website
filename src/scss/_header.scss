@@ -1,10 +1,11 @@
 .header {
     background: $gray-darker;
 
-    .content-ui{
+    .content-ui {
         position: relative;
     }
 
+    /*
     &__banner {
         width: 100%;
         background: rgb(255, 253, 231);
@@ -13,7 +14,8 @@
         padding: 7px;
         font-weight: bold;
     }
-    
+    */
+
     &__branding {
         display: inline-block;
         margin: 7px 15px 7px 5px;
@@ -107,7 +109,7 @@
                 border: 1px solid lighten($gray-darker, 15%);
             }
 
-            #collapse:checked ~ ul {
+            #collapse:checked~ul {
                 display: block;
             }
         }
