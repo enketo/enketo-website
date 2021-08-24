@@ -31,18 +31,18 @@
     "license": "Apache-2.0",
     "devDependencies": {
         "browserify": "^17.0.0",
-        "eslint": "^7.28.0",
-        "highlight.js": "^11.0.1",
-        "http-server": "^0.12.3",
+        "eslint": "^7.32.0",
+        "highlight.js": "^11.2.0",
+        "http-server": "^13.0.1",
         "imagemin-keep-folder": "^5.3.2",
         "imagemin-webp": "^6.0.0",
         "livereload": "^0.9.3",
         "marked": "0.3.18",
         "mime-types": "^2.1.31",
-        "node-sass": "^6.0.0",
+        "node-sass": "^6.0.1",
         "pug": "^3.0.2",
         "pug-cli": "1.0.0-alpha6",
-        "terser": "^5.7.0"
+        "terser": "^5.7.2"
     },
     "dependencies": {}
 }
