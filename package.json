@@ -26,7 +26,7 @@
         "css-w": "node-sass src/scss -o public/css -w",
         "livereload": "livereload \"public/css/**/*.css, public/**/*.html\" -d -w 1000",
         "build": "npm run clean && npm run copy && npm run convert && npm run sitemap && npm run js && npm run pug && npm run css && npm run terser",
-        "develop": "npm run js & npm run pug-w & npm run css-w & npm run livereload & http-server public"
+        "develop": "npm run js & npm run pug-w & npm run css-w & npm run livereload & npm run start"
     },
     "license": "Apache-2.0",
     "devDependencies": {
