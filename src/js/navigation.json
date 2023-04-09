@@ -29,8 +29,7 @@
             "APIs": "#{enketo-main}/develop/api",
             "XForms": "#{enketo-main}/xforms",
             "FAQ": "#{enketo-main}/faq",
-            "Authentication": "#{enketo-main}/develop/auth",
-            "Developer Forum": "#{enketo-developer-forum}"
+            "Authentication": "#{enketo-main}/develop/auth"
         },
         "Services": {
             "_self": "#{enketo-main}/services",
@@ -46,7 +45,6 @@
         "enketo-code": "https://github.com/enketo/",
         "enketo-xform-spec": "https://getodk.github.io/xforms-spec/",
         "xlsform-spec": "http://xlsform.org/",
-        "enketo-user-forum": "https://groups.google.com/forum/#!forum/enketo-users",
-        "enketo-developer-forum": "https://groups.google.com/forum/#!forum/enketo-dev"
+        "enketo-user-forum": "https://forum.getodk.org"
     }
 }

@@ -16,7 +16,7 @@
         "install": "npm run build",
         "clean": "if [ -d \"public\" ]; then rm -R public ; fi; mkdir public; mkdir public/js",
         "copy": "cp -R src/media public/media && cp -f src/js/navigation.json public/js/ && cp -f _* public && cp -f manifest.json public/",
-        "convert": "node ./tools/images.js",
+        "convert": "node ./tools/images.mjs",
         "sitemap": "node ./tools/sitemap.js",
         "js": "browserify src/js/all.js -o public/js/all.js",
         "terser": "terser public/js/all.js -o public/js/all.min.js -m -c",
@@ -31,18 +31,17 @@
     "license": "Apache-2.0",
     "devDependencies": {
         "browserify": "^17.0.0",
-        "eslint": "^8.1.0",
-        "highlight.js": "^11.3.1",
-        "http-server": "^14.0.0",
-        "imagemin-keep-folder": "^5.3.2",
-        "imagemin-webp": "^6.0.0",
+        "eslint": "^8.38.0",
+        "highlight.js": "^11.7.0",
+        "http-server": "^14.1.1",
+        "imagemin": "^8.0.1",
+        "imagemin-webp": "^8.0.0",
         "livereload": "^0.9.3",
-        "marked": "0.3.18",
-        "mime-types": "^2.1.33",
-        "node-sass": "^6.0.1",
+        "marked": "4.3.0",
+        "mime-types": "^2.1.35",
+        "node-sass": "^8.0.0",
         "pug": "^3.0.2",
         "pug-cli": "1.0.0-alpha6",
-        "terser": "^5.9.0"
-    },
-    "dependencies": {}
+        "terser": "^5.16.8"
+    }
 }

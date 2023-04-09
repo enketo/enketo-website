@@ -18,10 +18,9 @@ const replaceIcons = ( text ) => text
 
 // Replace navigation.json references
 const lookupNavItem = ( keyStr ) => {
-    return keyStr.replace( /(primary|sites)(\.|\[).+/, ( match ) => {
+    return keyStr.replace( /(primary|sites)(\.|\[).+/, ( match, p1, p2 ) => {
         let item = navigation;
-        const props = match.split( /\s*\.|\[\s*&quot;|&quot;\s*\]|\[\s*&#39;|&#39;\s*\]\s*/ );
-
+        const props = match.split( /\s*\.|\[\s*"|"\s*\]|\[\s*'|'\s*\]\s*/ );
         props.forEach( ( prop ) => {
             if ( prop ) {
                 item = item && typeof item[ prop ] !== 'undefined' ? item[ prop ] : null;
@@ -60,7 +59,7 @@ renderer.image = ( href, title, text ) => {
 
 module.exports = {
     filters: {
-        md: text => marked( text, { renderer: renderer } ),
+        md: text => marked.parse( text, { renderer: renderer } ),
         scss: text => sass.renderSync( { data: text, outputStyle: 'compact', includePaths: [ 'src/scss' ] } ).css.toString(),
     },
     pretty: false,
