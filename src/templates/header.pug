@@ -1,20 +1,8 @@
 header.header
-  //.header__banner
-    | Black Lives Matter. Support the 
-    a(href="https://www.naacpldf.org/support/") NAACP LDF
-    a(href="https://bailproject.org/") Bail Project
-    a(href="https://eji.org/") Equal Justice Initiative
-    a(href="https://action.aclu.org/") ACLU
-    a(href="https://aapf.org/") African American Policy Forum
-    |.
-    script.
-      const showOne = ( elements )=> {
-          if ( elements.length ) { 
-              const random = Math.floor( Math.random() * elements.length );
-              elements.forEach( (org, index) => org.style.display = ( index === random ) ? 'inline' : 'none' );
-          }
-      };
-      showOne( document.querySelectorAll('.header__banner a') );
+  .header__banner
+    | Enketo has joined ODK! 
+    a(href="https://blog.enketo.org/enketo-has-joined-odk") Learn more
+    | .
   .content-ui
     a.header__branding(href= interpolate("#{enketo-main}/"), aria-label='Enketo front page')
       img(src= interpolate("#{enketo-main}/media/images/logos/enketo_bare_white_150x56.png"), alt="Enketo Logo")
