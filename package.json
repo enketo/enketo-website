@@ -43,5 +43,20 @@
         "pug": "^3.0.2",
         "pug-cli": "1.0.0-alpha6",
         "terser": "^5.16.8"
-    }
+    },
+    "engines": {
+        "node": "^20"
+    },
+    "devEngines": {
+        "runtime": {
+            "name": "node",
+            "onFail": "error"
+        },
+        "packageManager": {
+            "name": "npm",
+            "version": "^10",
+            "onFail": "error"
+        }
+    },
+    "packageManager": "npm@10.8.2"
 }
