@@ -18,7 +18,7 @@
             "Installation": "#{enketo-main}/use/installation",
             "FAQ": "#{enketo-main}/faq",
             "XLSForm": "#{xlsform-spec}",
-            "User Forum": "#{enketo-user-forum}"
+            "User Forum": "#{kobotoolbox-user-forum}"
         },
         "Develop": {
             "_self": "#{enketo-main}/develop",
@@ -44,6 +44,6 @@
         "enketo-code": "https://github.com/enketo/",
         "enketo-xform-spec": "https://getodk.github.io/xforms-spec/",
         "xlsform-spec": "http://xlsform.org/",
-        "enketo-user-forum": "https://forum.getodk.org"
+        "kobotoolbox-user-forum": "https://community.kobotoolbox.org/"
     }
 }
