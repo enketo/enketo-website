@@ -1,9 +1,11 @@
 extends ../../templates/layout
 
 mixin add-item(intro)
-  p= intro+' '
-    | Please add 
-    a(href=sites['enketo-code']+'/enketo-website/issues') an issue describing the request 
+  p(style='font-size:smaller;')= intro+' '
+    | Please add
+    |
+    a(href=sites['enketo-code']+'enketo-website/issues') an issue describing the request
+    |
     | to this website's repository.
 
 block vars
@@ -19,24 +21,34 @@ block main
   article
     .content
       h2 Enketo Services
-      section#development
-        :md
-          ### Enketo Development
-          
-          To customize or develop new tools, contact:
-        
-          * (let us know if you'd like to be listed here)
-
-        +add-item('Would you like to be added to this list?')
       section#saas
         :md
           ### Enketo as a Service
-          
+
           The following Enketo services are available:
-         
+
           * Enketo and ODK Central as a service by [ODK](https://getodk.org).
-          * Hosting, supporting, and customization of KoboToolbox instances including Enketo, including extensions for case management and additional security, and disciplined form design by [QED](https://qed.ai).
-          
-        
-        +add-item('Would you like to add a service to this list?')
-        
+          * Enketo and KoboToolbox as a service by [Kobo](https://www.kobotoolbox.org).
+
+
+        +add-item('Would you like to be added this list?')
+      section#hosted
+        :md
+          ### Enketo hosting
+
+          To host your own Enketo, contact:
+
+          * Hosting, supporting, and customization of KoboToolbox instances by [Kobo](https://www.kobotoolbox.org).
+          * Hosting, supporting, and customization of KoboToolbox instances by [QED](https://qed.ai).
+
+
+        +add-item('Would you like to be added this list?')
+      section#development
+        :md
+          ### Enketo Development
+
+          To customize or develop new tools, contact:
+
+          * Development of Enketo features and widgets by [Kobo](https://www.kobotoolbox.org).
+
+        +add-item('Would you like to be added to this list?')
