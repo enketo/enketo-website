@@ -39,7 +39,7 @@ jobs:
       uses: zulip/github-actions-zulip/send-message@v1
       with:
         api-key: ${{ secrets.ZULIP_API_KEY_GITHUB_ACTIONS_BOT }}
-        email: "github-actions-bot@chat.kobotoolbox.org"
+        email: "github-actions-2nd-bot@chat.kobotoolbox.org"
         organization-url: "https://chat.kobotoolbox.org"
         type: "stream"
         to: "Kobo Dev"
