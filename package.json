@@ -24,19 +24,19 @@
         "develop": "npm run js & npm run pug-w & npm run css-w & npm run livereload & npm run start"
     },
     "devDependencies": {
-        "browserify": "^17.0.0",
+        "browserify": "^17.0.1",
         "eslint": "^8.38.0",
-        "highlight.js": "^11.7.0",
+        "highlight.js": "^11.11.1",
         "http-server": "^14.1.1",
         "imagemin": "^8.0.1",
         "imagemin-webp": "^8.0.0",
-        "livereload": "^0.9.3",
+        "livereload": "^0.10.3",
         "marked": "4.3.0",
         "mime-types": "^2.1.35",
         "node-sass": "^8.0.0",
-        "pug": "^3.0.2",
+        "pug": "^3.0.3",
         "pug-cli": "1.0.0-alpha6",
-        "terser": "^5.16.8"
+        "terser": "^5.43.1"
     },
     "engines": {
         "node": "^20"
