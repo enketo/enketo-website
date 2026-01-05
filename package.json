@@ -34,7 +34,7 @@
         "marked": "4.3.0",
         "mime-types": "^2.1.35",
         "node-sass": "^8.0.0",
-        "pug": "^3.0.2",
+        "pug": "^3.0.3",
         "pug-cli": "1.0.0-alpha6",
         "terser": "^5.16.8"
     },
