@@ -33,7 +33,7 @@
         "livereload": "^0.9.3",
         "marked": "4.3.0",
         "mime-types": "^2.1.35",
-        "node-sass": "^8.0.0",
+        "node-sass": "^9.0.0",
         "pug": "^3.0.2",
         "pug-cli": "1.0.0-alpha6",
         "terser": "^5.16.8"
